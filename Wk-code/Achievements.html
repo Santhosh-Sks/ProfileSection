@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Achievements & Awards — Employee Profile Dashboard</title>
+   <link rel="stylesheet" href="../Wk-css/style.css">
+</head>
+
+<body>
+   <svg style="display:none" aria-hidden="true">
+      <symbol id="icon-user" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <circle cx="12" cy="8" r="3"></circle>
+         <path d="M4 20c0-3.3137 3.582-6 8-6s8 2.6863 8 6"></path>
+      </symbol>
+      <symbol id="icon-ring" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <circle cx="12" cy="12" r="6"></circle>
+         <circle cx="12" cy="8" r="2"></circle>
+      </symbol>
+      <symbol id="icon-camera" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+         <circle cx="12" cy="12" r="3"></circle>
+      </symbol>
+      <symbol id="icon-passport" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <rect x="3" y="4" width="14" height="16" rx="1.5"></rect>
+         <circle cx="11" cy="12" r="2.2"></circle>
+      </symbol>
+      <symbol id="icon-car" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M3 13l2-4h14l2 4v4H3v-4z"></path>
+         <circle cx="7" cy="18" r="1.5"></circle>
+         <circle cx="17" cy="18" r="1.5"></circle>
+      </symbol>
+      <symbol id="icon-stethoscope" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M20 7v2a5 5 0 0 1-5 5h0"></path>
+         <path d="M5 14a7 7 0 0 0 7 7v-4"></path>
+         <circle cx="19" cy="20" r="1.5"></circle>
+      </symbol>
+      <symbol id="icon-language" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+         <path d="M8 9h8"></path>
+         <path d="M8 13h5"></path>
+      </symbol>
+      <symbol id="icon-gear" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <circle cx="12" cy="12" r="3"></circle>
+         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33">
+         </path>
+      </symbol>
+      <symbol id="icon-tag" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M20.59 13.41l-7-7a2 2 0 0 0-2.83 0L3 14v5a1 1 0 0 0 1 1h5l9.59-6.59a2 2 0 0 0 0-3.41z"></path>
+         <circle cx="7" cy="7" r="1"></circle>
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M3 11l9-7 9 7"></path>
+         <path d="M5 11v8a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1v-8"></path>
+      </symbol>
+      <symbol id="icon-phone" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path
+            d="M22 16.92V21a1 1 0 0 1-1.11 1A19.86 19.86 0 0 1 3 5.11 1 1 0 0 1 4 4h4.09a1 1 0 0 1 1 .75c.12.66.36 1.3.71 1.88a1 1 0 0 1-.24 1L8.91 9.91">
+         </path>
+      </symbol>
+      <symbol id="icon-family" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <circle cx="9" cy="8" r="2"></circle>
+         <path d="M2 20v-1a4 4 0 0 1 4-4h6"></path>
+         <circle cx="18" cy="9" r="2"></circle>
+      </symbol>
+      <symbol id="icon-graduation" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M22 12l-10 5L2 12l10-5 10 5z"></path>
+         <path d="M12 7v6"></path>
+      </symbol>
+      <symbol id="icon-building" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+         <path d="M9 7h.01M9 11h.01M9 15h.01M15 7h.01M15 11h.01M15 15h.01"></path>
+      </symbol>
+      <symbol id="icon-document" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+         <path d="M14 2v6h6"></path>
+      </symbol>
+      <symbol id="icon-trophy" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M8 21h8"></path>
+         <path d="M17 3v4a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3V3"></path>
+         <path d="M3 6h4M17 6h4"></path>
+      </symbol>
+      <symbol id="icon-bank" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M3 10l9-6 9 6"></path>
+         <path d="M5 10v7M9 10v7M13 10v7M17 10v7"></path>
+         <path d="M3 19h18"></path>
+      </symbol>
+      <symbol id="icon-id" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+         <circle cx="8" cy="11" r="2"></circle>
+         <path d="M14 10h4"></path>
+      </symbol>
+      <symbol id="icon-briefcase" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <rect x="3" y="7" width="18" height="12" rx="2"></rect>
+         <path d="M8 7V5h8v2"></path>
+      </symbol>
+      <symbol id="icon-logout" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
+         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+         <polyline points="16 17 21 12 16 7"></polyline>
+         <line x1="21" y1="12" x2="9" y2="12"></line>
+      </symbol>
+   </svg>
+
+   <div class="app-container">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+         <div class="sidebar-header">
+            <div class="brand">WorkLine</div>
+         </div>
+         <nav class="sidebar-nav">
+            <div class="nav-section">
+               <a href="Home.html" class="nav-item"><svg>
+                     <use href="#icon-home"></use>
+                  </svg> Dashboard</a>
+               <a href="Directory.html" class="nav-item"><svg>
+                     <use href="#icon-user"></use>
+                  </svg> Employee Directory</a>
+            </div>
+            <div class="nav-section">
+               <h4>Personal Info</h4>
+               <a href="BasicDetails.html" class="nav-item"><svg>
+                     <use href="#icon-user"></use>
+                  </svg> Basic Details <span class="nav-badge">100%</span></a>
+               <a href="Family.html" class="nav-item"><svg>
+                     <use href="#icon-family"></use>
+                  </svg> Family & Relatives</a>
+               <a href="Contact.html" class="nav-item"><svg>
+                     <use href="#icon-phone"></use>
+                  </svg> Contact Info</a>
+               <a href="Emergency.html" class="nav-item"><svg>
+                     <use href="#icon-phone"></use>
+                  </svg> Emergency Contacts</a>
+               <a href="MaritalStatus.html" class="nav-item"><svg>
+                     <use href="#icon-ring"></use>
+                  </svg> Marital Status</a>
+            </div>
+            <div class="nav-section">
+               <h4>Career & Ed</h4>
+               <a href="Academic.html" class="nav-item"><svg>
+                     <use href="#icon-graduation"></use>
+                  </svg> Academic Quals <span class="nav-badge">100%</span></a>
+               <a href="Courses.html" class="nav-item"><svg>
+                     <use href="#icon-building"></use>
+                  </svg> Master Courses</a>
+               <a href="Skills.html" class="nav-item"><svg>
+                     <use href="#icon-gear"></use>
+                  </svg> Core Skills</a>
+               <a href="Language.html" class="nav-item"><svg>
+                     <use href="#icon-language"></use>
+                  </svg> Language Skills</a>
+               <a href="Employment.html" class="nav-item"><svg>
+                     <use href="#icon-briefcase"></use>
+                  </svg> Prev. Employment <span class="nav-badge">100%</span></a>
+               <a href="Achievements.html" class="nav-item active"><svg>
+                     <use href="#icon-trophy"></use>
+                  </svg> Achievements</a>
+               <a href="Membership.html" class="nav-item"><svg>
+                     <use href="#icon-tag"></use>
+                  </svg> Memberships</a>
+            </div>
+            <div class="nav-section">
+               <h4>Documents</h4>
+               <a href="Passport.html" class="nav-item"><svg>
+                     <use href="#icon-passport"></use>
+                  </svg> Passport</a>
+               <a href="License.html" class="nav-item"><svg>
+                     <use href="#icon-car"></use>
+                  </svg> Driving License</a>
+               <a href="ID.html" class="nav-item"><svg>
+                     <use href="#icon-id"></use>
+                  </svg> Identity Cards <span class="nav-badge">100%</span></a>
+            </div>
+            <div class="nav-section">
+               <h4>Health & Financial</h4>
+               <a href="Medical.html" class="nav-item"><svg>
+                     <use href="#icon-stethoscope"></use>
+                  </svg> Medical Data <span class="nav-badge">100%</span></a>
+               <a href="Bank.html" class="nav-item"><svg>
+                     <use href="#icon-bank"></use>
+                  </svg> Bank Info</a>
+            </div>
+            <div class="nav-section">
+               <h4>Settings</h4>
+               <a href="Photo.html" class="nav-item"><svg>
+                     <use href="#icon-camera"></use>
+                  </svg> Update Photo</a>
+               <a href="#" class="nav-item"><svg>
+                     <use href="#icon-logout"></use>
+                  </svg> Log out</a>
+            </div>
+         </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+
+         <header class="top-bar">
+            <div class="top-bar-left">
+               <h2>Welcome back, Santhosh!<span style="color: var(--text-muted); font-weight: 500; font-size: 0.9em; margin-left: 8px;">[1102]</span></h2>
+            </div>
+            <div class="top-bar-right">
+               <button class="btn btn-outline">Switch to Admin</button>
+               <div class="user-profile-menu">
+                  <div class="avatar-small">S</div>
+               </div>
+            </div>
+         
+         <!-- Profile Dropdown -->
+         <div id="profileDropdown" class="profile-dropdown-menu">
+            <a href="BasicDetails.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> View Profile</a>
+            <a href="Settings.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33"></path></svg> Settings</a>
+            <hr style="border:none; border-top:1px solid var(--border); margin: 4px 0;">
+            <a href="Login.html" style="color: #ef4444;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Logout</a>
+         </div>
+</header>
+
+         <div class="content-wrapper">
+            <section class="sections-panel">
+               <div class="panel-header">
+                  <div class="panel-title">Achievements & Awards</div>
+               </div>
+
+               <div class="form-container">
+                  <div style="background: var(--card); padding: 30px; border-radius: 12px; border: 1px solid var(--border);">
+
+                     <div class="info-box">
+                        <h4>Showcase Your Accolades</h4>
+                        <p>Highlight your professional awards, publications, registered patents, and significant recognitions earned throughout your career.</p>
+                     </div>
+
+                     <form id="achievementForm">
+                        
+                        <!-- Initial Decision Block -->
+                        <div class="form-group" style="margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border);">
+                           <label class="form-label" style="font-size: 15px; font-weight: 600; color: var(--text);">Do you have any notable achievements to add? <span style="color: #ef4444;">*</span></label>
+                           <select id="hasAchievement" class="form-control" style="max-width: 200px; font-weight: 500; font-size: 15px;" required>
+                              <option value="No">No</option>
+                              <option value="Yes">Yes</option>
+                           </select>
+                        </div>
+
+                        <!-- Dynamic Achievement Block (Hidden by default) -->
+                        <div id="achBlock" class="language-block" style="display: none; padding-bottom: 24px; margin-bottom: 30px; border-bottom: 1px dashed var(--border);">
+                           
+                           <div class="proficiency-grid" style="margin-bottom: 20px;">
+                              <div class="form-group">
+                                 <label class="form-label">Achievement Title / Name <span style="color: #ef4444;">*</span></label>
+                                 <input type="text" id="achTitle" class="form-control" placeholder="E.g., Employee of the Year, Patent Issued">
+                              </div>
+                              <div class="form-group">
+                                 <label class="form-label">Type of Achievement <span style="color: #ef4444;">*</span></label>
+                                 <select id="achType" class="form-control">
+                                    <option value="">Select Type</option>
+                                    <option value="Award & Recognition">Award & Recognition</option>
+                                    <option value="Patent Registered">Patent Registered</option>
+                                    <option value="Publication / Paper">Publication / Paper</option>
+                                    <option value="Competition / Hackathon">Competition / Hackathon</option>
+                                    <option value="Scholarship">Scholarship</option>
+                                    <option value="Other">Other</option>
+                                 </select>
+                              </div>
+                           </div>
+
+                           <div class="form-group" style="margin-bottom: 20px;">
+                              <label class="form-label">Year / Date of Achievement</label>
+                              <input type="date" id="achDate" class="form-control" style="max-width: 250px;">
+                           </div>
+
+                           <div class="form-group" style="margin-bottom: 20px;">
+                              <label class="form-label">Details & Notes</label>
+                              <textarea id="achNotes" class="form-control" rows="3" placeholder="Describe the achievement in detail..."></textarea>
+                           </div>
+
+                           <div style="display: flex; justify-content: flex-end; margin-top: 16px;">
+                              <button type="button" id="addAchBtn" class="btn btn-outline" style="min-width: 150px; font-weight: 600; color: var(--primary); border-color: var(--primary);">+ Add Achievement</button>
+                           </div>
+                        </div>
+
+                        <!-- Data Table for Achievements -->
+                        <div id="achTableWrapper" style="display: none; margin-bottom: 30px; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; background: #fff;">
+                           <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px;">
+                              <thead style="border-bottom: 2px solid var(--border); background: #f8fafc;">
+                                 <tr>
+                                    <th style="padding: 12px 16px; font-weight: 600; color: var(--text); border-right: 1px solid var(--border); width: 60px; text-align: center;">Sl.No.</th>
+                                    <th style="padding: 12px 16px; font-weight: 600; color: var(--text); border-right: 1px solid var(--border);">Achievement Details <span style="color:#ccc;font-size:10px;float:right;">↕</span></th>
+                                    <th style="padding: 12px 16px; font-weight: 600; color: var(--text); border-right: 1px solid var(--border);">Details & Notes</th>
+                                    <th style="padding: 12px 16px; font-weight: 600; color: var(--text); width: 80px; text-align: center;">Action</th>
+                                 </tr>
+                              </thead>
+                              <tbody id="achTableBody">
+                                 <!-- Dynamic content will load here -->
+                              </tbody>
+                           </table>
+                        </div>
+
+                                                <div class="action-bar" style="margin-top: 30px;">
+                           <button type="submit" class="btn btn-outline" style="min-width: 100px;">Save</button>
+                           <button type="button" class="btn btn-primary" style="min-width: 140px;">Save & Next</button>
+                           <button type="button" class="btn btn-primary" style="min-width: 100px;">Next</button>
+                        </div>
+                     </form>
+
+                  </div>
+               </div>
+            </section>
+         </div>
+         <footer class="page-footer">
+            <small>© 2026 WorkLine HR Portal. All rights reserved.</small>
+         </footer>
+      </main>
+   </div>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function () {
+         
+         const hasAch = document.getElementById('hasAchievement');
+         const achBlock = document.getElementById('achBlock');
+         const achTableWrapper = document.getElementById('achTableWrapper');
+         const addBtn = document.getElementById('addAchBtn');
+         const tableBody = document.getElementById('achTableBody');
+
+         // Handle 'Do you have achievements?' Top Toggle
+         hasAch.addEventListener('change', function() {
+            if(this.value === 'Yes') {
+               achBlock.style.display = 'block';
+               // Show table if there's already an item
+               if(tableBody.children.length > 0) {
+                  achTableWrapper.style.display = 'block';
+               } else {
+                  // Only show the empty table once they start interacting? Or just show it for consistency.
+                  achTableWrapper.style.display = 'block';
+               }
+            } else {
+               achBlock.style.display = 'none';
+               achTableWrapper.style.display = 'none';
+            }
+         });
+
+         addBtn.addEventListener('click', function () {
+            const title = document.getElementById('achTitle').value;
+            const type = document.getElementById('achType').value;
+            const date = document.getElementById('achDate').value;
+            const notes = document.getElementById('achNotes').value;
+
+            if (!title || !type) {
+               alert('Please provide the Achievement Title and Type.');
+               return;
+            }
+
+            const rowCount = tableBody.children.length + 1;
+            const tr = document.createElement('tr');
+            tr.style.borderBottom = '1px solid var(--border)';
+
+            // Formatting title column
+            let subtitle = "";
+            if(date) {
+               subtitle = ` | <span style="color:var(--text-muted)">Date: ${date}</span>`;
+            }
+            
+            // Format Type Badge
+            let badgeColor = '#f1f5f9';
+            let textColor = '#475569';
+            if (type.includes('Award')) { badgeColor = '#fef08a'; textColor = '#854d0e'; }
+            if (type.includes('Patent')) { badgeColor = '#e0e7ff'; textColor = '#3730a3'; }
+            if (type.includes('Publication')) { badgeColor = '#dcfce7'; textColor = '#166534'; }
+
+            const typeBadge = `<span style="background: ${badgeColor}; color: ${textColor}; padding: 2px 8px; border-radius: 12px; font-size: 10px; font-weight: 600; margin-left: 8px;">${type}</span>`;
+            
+            const titleFmt = `<span style="font-weight: 600; color: var(--primary); font-size: 14px;">${title}</span> ${typeBadge} <br><div style="margin-top:4px; font-size:12px;">${subtitle}</div>`;
+
+            let displayNotes = '<span style="color: #94a3b8; font-style: italic;">No specific notes provided.</span>';
+            if(notes.trim() !== '') {
+               displayNotes = notes.replace(/\n/g, '<br>');
+            }
+
+            tr.innerHTML = `
+               <td style="padding: 12px 16px; color: var(--text-muted); border-right: 1px solid var(--border); text-align: center;">${rowCount}</td>
+               <td style="padding: 12px 16px; color: var(--text); border-right: 1px solid var(--border); max-width: 250px;">${titleFmt}</td>
+               <td style="padding: 12px 16px; color: var(--text-muted); border-right: 1px solid var(--border); max-width: 350px;">${displayNotes}</td>
+               <td style="padding: 12px 16px; text-align: center;">
+                  <button type="button" style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px; padding: 4px 10px; font-size: 12px; cursor: pointer; color: var(--text-muted); display: inline-flex; align-items: center; gap: 4px;">
+                     Edit
+                  </button>
+               </td>
+            `;
+
+            tableBody.appendChild(tr);
+
+            // Clear inputs for next entry
+            document.getElementById('achTitle').value = '';
+            document.getElementById('achType').value = '';
+            document.getElementById('achDate').value = '';
+            document.getElementById('achNotes').value = '';
+         });
+
+         document.getElementById('achievementForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Achievements saved successfully!');
+         });
+      });
+   </script>
+
+<script>
+   // --- UNIVERSAL NEXT BUTTON ROUTING ---
+   document.addEventListener('DOMContentLoaded', function () {
+      const actionButtons = document.querySelectorAll('.action-bar button');
+      let nextBtn = null;
+      let saveNextBtn = null;
+
+      actionButtons.forEach(btn => {
+         if (btn.textContent.trim() === 'Next') nextBtn = btn;
+         if (btn.textContent.trim() === 'Save & Next') saveNextBtn = btn;
+      });
+
+      function routeToNext() {
+         const activeNavItem = document.querySelector('.sidebar-nav .nav-item.active');
+         if (activeNavItem) {
+            const allNavItems = Array.from(document.querySelectorAll('.sidebar-nav .nav-item'));
+            const currentIndex = allNavItems.indexOf(activeNavItem);
+            
+            // Navigate to the precise next logical item in the sidebar
+            if (currentIndex !== -1 && currentIndex + 1 < allNavItems.length) {
+               const nextUrl = allNavItems[currentIndex + 1].getAttribute('href');
+               if (nextUrl && nextUrl !== '#' && !nextUrl.includes('logout')) {
+                  window.location.href = nextUrl;
+               }
+            }
+         }
+      }
+
+      if (nextBtn) {
+         nextBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // In case it accidentally triggers form logic
+            routeToNext();
+         });
+      }
+
+      // Automatically trigger NEXT after SAVE for 'Save & Next' buttons
+      if (saveNextBtn) {
+         saveNextBtn.addEventListener('click', function() {
+            setTimeout(() => {
+               routeToNext();
+            }, 500); // 500ms delay to allow normal DOM form save alerts to fire
+         });
+      }
+   });
+</script>
+
+<script>
+   document.addEventListener('click', function(e) {
+      const menu = document.querySelector('.user-profile-menu');
+      const dropdown = document.getElementById('profileDropdown');
+      if (menu && dropdown) {
+         if (menu.contains(e.target)) {
+            dropdown.classList.toggle('show');
+         } else if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('show');
+         }
+      }
+   });
+</script>
+</body>
+
+
+
+</html>
