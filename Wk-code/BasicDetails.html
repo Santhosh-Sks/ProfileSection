@@ -149,9 +149,6 @@
                <a href="Emergency.html" class="nav-item"><svg>
                      <use href="#icon-phone"></use>
                   </svg> Emergency Contacts</a>
-               <a href="MaritalStatus.html" class="nav-item"><svg>
-                     <use href="#icon-ring"></use>
-                  </svg> Marital Status</a>
             </div>
             <div class="nav-section">
                <h4>Career & Ed</h4>
@@ -256,12 +253,6 @@
                 </div>
               </div>
 
-              <div class="form-group" style="margin-bottom: 30px;">
-                <label class="form-label" for="fullName">Full Name</label>
-                <input type="text" id="fullName" class="form-control" readonly tabindex="-1"
-                  style="background: rgba(0,0,0,0.02); color: var(--text-muted); cursor: not-allowed;"
-                  placeholder="Auto-generated from first and last name">
-              </div>
 
               <div class="form-row">
                 <div class="form-group">
@@ -370,13 +361,16 @@
 
       // Auto-generate Full Name
       function updateFullName() {
+        if (!fullNameInput) return;
         const first = firstNameInput.value.trim();
         const last = lastNameInput.value.trim();
         fullNameInput.value = (first + " " + last).trim();
       }
 
-      firstNameInput.addEventListener("input", updateFullName);
-      lastNameInput.addEventListener("input", updateFullName);
+      if (firstNameInput && lastNameInput) {
+        firstNameInput.addEventListener("input", updateFullName);
+        lastNameInput.addEventListener("input", updateFullName);
+      }
 
       // Simple OTP Button interaction
       if (otpButton) {

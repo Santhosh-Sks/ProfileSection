@@ -149,9 +149,6 @@
           <a href="Emergency.html" class="nav-item"><svg>
               <use href="#icon-phone"></use>
             </svg> Emergency Contacts</a>
-          <a href="MaritalStatus.html" class="nav-item"><svg>
-              <use href="#icon-ring"></use>
-            </svg> Marital Status</a>
         </div>
         <div class="nav-section">
           <h4>Career & Ed</h4>
@@ -279,21 +276,34 @@
       <!-- Content Area -->
       <div class="content-wrapper">
 
-        <!-- Profile Banner Section -->
-        <section class="profile-banner">
-          <div class="profile-left">
-            <div class="avatar">S</div>
-            <div class="profile-info">
-              <div class="subtle">Employee Profile Summary</div>
-              <h2 class="employee-name">Santhosh <span class="emp-id">[1102]</span> <span class="status active">Active
-                  Role</span></h2>
+        <!-- LinkedIn-style Profile Card -->
+        <section class="profile-banner linkedin-style">
+          <div class="profile-cover">
+            <div class="cover-text-brand">
+              <h1>WorkLine</h1>
+              <p>"The art of simplicity is a puzzle of complexity"</p>
             </div>
           </div>
-
-          <div class="profile-right">
-            <div class="panel-badge">
-              <span class="approved">Profile Approved</span>
-              <span class="percent">95% Complete</span>
+          <div class="profile-content-wrap">
+            <div class="profile-avatar-container">
+              <div class="avatar-large">S</div>
+            </div>
+            
+            <div class="profile-meta-grid">
+              <div class="profile-info-block">
+                <h2 class="employee-name">
+                  Santhosh <span class="emp-id">[1102]</span>
+                  <span class="status active">Active Role</span>
+                </h2>
+                <p class="professional-headline">Software Engineer at WorkLine • UI/UX Specialist • Bangalore, India</p>
+              </div>
+              
+              <div class="profile-badges-block">
+                <div class="panel-badge">
+                  <span class="approved">Profile Approved</span>
+                  <span class="percent">95% Complete</span>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -302,102 +312,80 @@
         <div class="dashboard-main-grid">
           <!-- Left Column -->
           <div class="dashboard-left">
-            <section class="sections-panel mb-30">
+            <!-- Profile Strength Panel -->
+            <section class="sections-panel profile-strength-panel">
               <div class="panel-header">
-                <div class="panel-title">Incomplete Action Items</div>
-                <div class="panel-right">
-                  <input type="text" class="search" placeholder="Search forms...">
-                </div>
+                <div class="panel-title">Profile Strength & Completion</div>
               </div>
-
-              <div class="tiles">
-                <!-- Prioritize ones that are non-100% in navigation -->
-                <div class="tile required" onclick="window.location.href='Family.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-family"></use>
+              
+              <div class="profile-strength-container">
+                <div class="strength-summary-card">
+                  <div class="circular-progress-wrap">
+                    <svg class="circular-progress" viewBox="0 0 100 100">
+                      <circle class="bg" cx="50" cy="50" r="45"></circle>
+                      <circle class="fg" cx="50" cy="50" r="45" style="stroke-dasharray: 283; stroke-dashoffset: 14;"></circle>
                     </svg>
-                    <span class="label">Update Family Info</span>
+                    <div class="progress-text">
+                      <span class="percentage">95%</span>
+                      <span class="label">Strength</span>
+                    </div>
                   </div>
-                  <span class="check" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">!</span>
+                  <div class="strength-desc">
+                    <h3>All Star Profile</h3>
+                    <p>Your profile is almost complete! A complete profile increases visibility and compliance within the organization.</p>
+                  </div>
                 </div>
 
-                <div class="tile required" onclick="window.location.href='Contact.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-phone"></use>
-                    </svg>
-                    <span class="label">Emergency Contacts</span>
+                <div class="strength-breakdown">
+                  <div class="breakdown-item">
+                    <div class="breakdown-header">
+                      <span class="section-title">Personal Info</span>
+                      <span class="section-percentage">100%</span>
+                    </div>
+                    <div class="progress-bar-thin">
+                      <div class="progress-fill-thin success" style="width: 100%;"></div>
+                    </div>
                   </div>
-                  <span class="check" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">!</span>
-                </div>
 
-                <div class="tile required" onclick="window.location.href='Bank.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-bank"></use>
-                    </svg>
-                    <span class="label">Verify Bank Info</span>
+                  <div class="breakdown-item">
+                    <div class="breakdown-header">
+                      <span class="section-title">Career & Education</span>
+                      <span class="section-percentage">90%</span>
+                    </div>
+                    <div class="progress-bar-thin">
+                      <div class="progress-fill-thin" style="width: 90%;"></div>
+                    </div>
                   </div>
-                  <span class="check" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">!</span>
-                </div>
 
-                <div class="tile" onclick="window.location.href='Photo.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-camera"></use>
-                    </svg>
-                    <span class="label">Upload Latest ID Photo</span>
+                  <div class="breakdown-item">
+                    <div class="breakdown-header">
+                      <span class="section-title">Documents & IDs</span>
+                      <span class="section-percentage">100%</span>
+                    </div>
+                    <div class="progress-bar-thin">
+                      <div class="progress-fill-thin success" style="width: 100%;"></div>
+                    </div>
                   </div>
-                  <span class="check" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">!</span>
-                </div>
-              </div>
-            </section>
 
-            <section class="sections-panel">
-              <div class="panel-header">
-                <div class="panel-title">Recently Updated Forms</div>
-              </div>
-
-              <div class="tiles">
-                <div class="tile" onclick="window.location.href='BasicDetails.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-user"></use>
-                    </svg>
-                    <span class="label">Personal Info</span>
+                  <div class="breakdown-item">
+                    <div class="breakdown-header">
+                      <span class="section-title">Health & Financial</span>
+                      <span class="section-percentage">100%</span>
+                    </div>
+                    <div class="progress-bar-thin">
+                      <div class="progress-fill-thin success" style="width: 100%;"></div>
+                    </div>
                   </div>
-                  <span class="check">✓</span>
-                </div>
 
-                <div class="tile" onclick="window.location.href='Academic.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-graduation"></use>
-                    </svg>
-                    <span class="label">Academic Quals</span>
+                  <div class="breakdown-item">
+                    <div class="breakdown-header">
+                      <span class="section-title">Account Settings</span>
+                      <span class="section-percentage">50%</span>
+                    </div>
+                    <div class="progress-bar-thin">
+                      <div class="progress-fill-thin warning" style="width: 50%;"></div>
+                    </div>
                   </div>
-                  <span class="check">✓</span>
-                </div>
-
-                <div class="tile" onclick="window.location.href='Employment.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-briefcase"></use>
-                    </svg>
-                    <span class="label">Prev. Employment</span>
-                  </div>
-                  <span class="check">✓</span>
-                </div>
-
-                <div class="tile" onclick="window.location.href='Medical.html'">
-                  <div class="tile-content">
-                    <svg class="icon">
-                      <use href="#icon-stethoscope"></use>
-                    </svg>
-                    <span class="label">Medical Data</span>
-                  </div>
-                  <span class="check">✓</span>
                 </div>
               </div>
             </section>
@@ -461,24 +449,6 @@
 
           <!-- Right Column Widget Area -->
           <div class="dashboard-right">
-            <!-- Leave Balance Widget -->
-            <div class="right-widget gradient-widget">
-              <h3>Leave Balances <svg class="widget-icon">
-                  <use href="#icon-document"></use>
-                </svg></h3>
-              <div class="leave-stats">
-                <div class="stat-item">
-                  <div class="stat-value">12</div>
-                  <div class="stat-label">Annual</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-value">05</div>
-                  <div class="stat-label">Sick</div>
-                </div>
-              </div>
-              <button class="btn-outline w-100 mt-15" style="border-color: rgba(255,255,255,0.3); color: #fff;">Apply
-                for Leave</button>
-            </div>
 
             <!-- Upcoming Events Widget -->
             <div class="right-widget">
