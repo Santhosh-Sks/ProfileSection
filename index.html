@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -122,86 +123,22 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <div class="sidebar-header">
-        <div class="brand">WorkLine</div>
-      </div>
+      <div class="sidebar-header"><span class="brand-mark" title="WorkLine"></span></div>
       <nav class="sidebar-nav">
         <div class="nav-section">
-          <a href="index.html" class="nav-item active"><svg>
+          <a href="index.html" class="nav-item active" title="Dashboard"><svg>
               <use href="#icon-home"></use>
-            </svg> Dashboard</a>
-          <a href="Wk-code/Directory.html" class="nav-item"><svg>
+            </svg><span class="nav-label">Dashboard</span></a>
+          <a href="Wk-code/Directory.html" class="nav-item" title="Employee Directory"><svg>
               <use href="#icon-user"></use>
-            </svg> Employee Directory</a>
+            </svg><span class="nav-label">Employee Directory</span></a>
         </div>
         <div class="nav-section">
-          <h4>Personal Info</h4>
-          <a href="Wk-code/BasicDetails.html" class="nav-item"><svg>
-              <use href="#icon-user"></use>
-            </svg> Basic Details <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Family.html" class="nav-item"><svg>
-              <use href="#icon-family"></use>
-            </svg> Family & Relatives</a>
-          <a href="Wk-code/Contact.html" class="nav-item"><svg>
-              <use href="#icon-phone"></use>
-            </svg> Contact Info</a>
-          <a href="Wk-code/Emergency.html" class="nav-item"><svg>
-              <use href="#icon-phone"></use>
-            </svg> Emergency Contacts</a>
-        </div>
-        <div class="nav-section">
-          <h4>Career & Ed</h4>
-          <a href="Wk-code/Academic.html" class="nav-item"><svg>
-              <use href="#icon-graduation"></use>
-            </svg> Academic Quals <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Courses.html" class="nav-item"><svg>
-              <use href="#icon-building"></use>
-            </svg> Master Courses</a>
-          <a href="Wk-code/Skills.html" class="nav-item"><svg>
-              <use href="#icon-gear"></use>
-            </svg> Core Skills</a>
-          <a href="Wk-code/Language.html" class="nav-item"><svg>
-              <use href="#icon-language"></use>
-            </svg> Language Skills</a>
-          <a href="Wk-code/Employment.html" class="nav-item"><svg>
-              <use href="#icon-briefcase"></use>
-            </svg> Prev. Employment <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Achievements.html" class="nav-item"><svg>
-              <use href="#icon-trophy"></use>
-            </svg> Achievements</a>
-          <a href="Wk-code/Membership.html" class="nav-item"><svg>
-              <use href="#icon-tag"></use>
-            </svg> Memberships</a>
-        </div>
-        <div class="nav-section">
-          <h4>Documents</h4>
-          <a href="Wk-code/Passport.html" class="nav-item"><svg>
-              <use href="#icon-passport"></use>
-            </svg> Passport</a>
-          <a href="Wk-code/License.html" class="nav-item"><svg>
-              <use href="#icon-car"></use>
-            </svg> Driving License</a>
-          <a href="Wk-code/ID.html" class="nav-item"><svg>
-              <use href="#icon-id"></use>
-            </svg> Identity Cards <span class="nav-badge">100%</span></a>
-        </div>
-        <div class="nav-section">
-          <h4>Health & Financial</h4>
-          <a href="Wk-code/Medical.html" class="nav-item"><svg>
-              <use href="#icon-stethoscope"></use>
-            </svg> Medical Data <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Bank.html" class="nav-item"><svg>
-              <use href="#icon-bank"></use>
-            </svg> Bank Info</a>
-        </div>
-        <div class="nav-section">
-          <h4>Settings</h4>
-          <a href="Wk-code/Photo.html" class="nav-item"><svg>
-              <use href="#icon-camera"></use>
-            </svg> Update Photo</a>
-          <a href="#" class="nav-item"><svg>
-              <use href="#icon-logout"></use>
-            </svg> Log out</a>
+          <h4>Categories</h4>
+          <a href="Wk-code/hub-personal.html" class="nav-item category-nav-item" title="Personal — 4 modules"><svg><use href="#icon-family"></use></svg><span class="cat-text">Personal<small>4 modules</small></span></a>
+          <a href="Wk-code/hub-career.html" class="nav-item category-nav-item" title="Career & Education — 6 modules"><svg><use href="#icon-briefcase"></use></svg><span class="cat-text">Career & Education<small>6 modules</small></span></a>
+          <a href="Wk-code/hub-documents.html" class="nav-item category-nav-item" title="Documents & Records — 6 modules"><svg><use href="#icon-id"></use></svg><span class="cat-text">Documents & Records<small>6 modules</small></span></a>
+          <a href="Wk-code/hub-settings.html" class="nav-item category-nav-item" title="Settings — 2 modules"><svg><use href="#icon-gear"></use></svg><span class="cat-text">Settings<small>2 modules</small></span></a>
         </div>
       </nav>
     </aside>
@@ -308,6 +245,98 @@
           </div>
         </section>
 
+        <!-- Celebrations — a slim strip in the primary feed, so it never
+             breaks the card grid's vertical rhythm below it -->
+        <div class="celebration-strip">
+          <div class="celeb-icon"><svg><use href="#icon-trophy"></use></svg></div>
+          <div class="celeb-copy">
+            <div class="headline">🎉 <strong>Priya Raman</strong> celebrates 3 years at WorkLine this Thursday</div>
+            <div class="subline">Also this week: Charlie Davis's birthday • Sat, Aug 15</div>
+          </div>
+          <div class="celeb-avatars">
+            <div class="avatar-small shadow-sm" style="background: var(--accent); color:#fff;">PR</div>
+            <div class="avatar-small shadow-sm" style="background: var(--warning); color:#fff;">CD</div>
+          </div>
+          <a href="#" class="celeb-cta">Send wishes</a>
+        </div>
+
+        <!-- ============ QUICK PULSE ROW (bento) ============ -->
+        <div class="pulse-row">
+
+          <!-- Mini stat: modules filled -->
+          <div class="mini-stat-card">
+            <div class="mini-stat-top">
+              <span class="mini-stat-icon accent"><svg><use href="#icon-document"></use></svg></span>
+              <span class="trend-pill">+2 this week</span>
+            </div>
+            <div class="mini-stat-value">10<span class="unit">/12</span></div>
+            <div class="mini-stat-label">Modules Filled</div>
+            <div class="mini-stat-sub">2 sections still pending</div>
+          </div>
+
+          <!-- Mini stat: documents verified -->
+          <div class="mini-stat-card">
+            <div class="mini-stat-top">
+              <span class="mini-stat-icon success"><svg><use href="#icon-id"></use></svg></span>
+              <span class="trend-pill">+12% verified</span>
+            </div>
+            <div class="mini-stat-value">9<span class="unit">/10</span></div>
+            <div class="mini-stat-label">Documents Verified</div>
+            <div class="mini-stat-sub">1 awaiting HR review</div>
+          </div>
+
+          <!-- Employee pulse / mood -->
+          <div class="pulse-card">
+            <div class="pulse-card-head">
+              <div class="pulse-card-title"><span class="emoji">🙂</span> Employee Pulse</div>
+              <span class="pill-soft">Daily check-in</span>
+            </div>
+            <p class="pulse-card-sub">How's work treating you today?</p>
+            <div class="mood-row" id="moodRow">
+              <button class="mood-btn" data-mood="Great">😄</button>
+              <button class="mood-btn" data-mood="Good">🙂</button>
+              <button class="mood-btn" data-mood="Okay">😐</button>
+              <button class="mood-btn" data-mood="Low">🙁</button>
+              <button class="mood-btn" data-mood="Rough">😞</button>
+            </div>
+            <div class="pulse-feedback" id="pulseFeedback">Your check-in stays private to you — nothing is saved.</div>
+          </div>
+
+          <!-- This week's profile tasks -->
+          <div class="week-card">
+            <div class="week-card-head">
+              <div>
+                <div class="week-card-title">This Week's Profile Tasks</div>
+                <div class="week-card-sub">Week of Aug 10 – 16</div>
+              </div>
+              <span class="pill-success">On Track</span>
+            </div>
+
+            <div class="week-strip">
+              <div class="week-day done"><span class="now-tag">&nbsp;</span><span class="dot"></span>Mon<span>10</span></div>
+              <div class="week-day today"><span class="now-tag">Now</span><span class="dot"></span>Tue<span>11</span></div>
+              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Wed<span>12</span></div>
+              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Thu<span>13</span></div>
+              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Fri<span>14</span></div>
+              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sat<span>15</span></div>
+              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sun<span>16</span></div>
+            </div>
+
+            <div class="week-readout">
+              <span class="num" id="weekTaskNum">2</span>
+              <span class="of" id="weekTaskOf">of 5 tasks reviewed this week</span>
+            </div>
+            <div class="progress-bar-thin">
+              <div class="progress-fill-thin" id="weekTaskFill" style="width: 40%;"></div>
+            </div>
+
+            <div class="week-actions">
+              <button class="btn-soft" id="viewPendingBtn" type="button">View Pending Items</button>
+              <button class="btn-outline-soft" id="markTodayBtn" type="button">Mark Today Reviewed</button>
+            </div>
+          </div>
+        </div>
+
         <!-- Dashboard Main Content Grid -->
         <div class="dashboard-main-grid">
           <!-- Left Column -->
@@ -323,10 +352,10 @@
                   <div class="circular-progress-wrap">
                     <svg class="circular-progress" viewBox="0 0 100 100">
                       <circle class="bg" cx="50" cy="50" r="45"></circle>
-                      <circle class="fg" cx="50" cy="50" r="45" style="stroke-dasharray: 283; stroke-dashoffset: 14;"></circle>
+                      <circle class="fg" id="overallProgressCircle" cx="50" cy="50" r="45" style="stroke-dasharray: 283; stroke-dashoffset: 14;"></circle>
                     </svg>
                     <div class="progress-text">
-                      <span class="percentage">95%</span>
+                      <span class="percentage" id="overallPercentText">95%</span>
                       <span class="label">Strength</span>
                     </div>
                   </div>
@@ -347,13 +376,13 @@
                     </div>
                   </div>
 
-                  <div class="breakdown-item">
+                  <div class="breakdown-item" data-breakdown="career">
                     <div class="breakdown-header">
                       <span class="section-title">Career & Education</span>
-                      <span class="section-percentage">90%</span>
+                      <span class="section-percentage" data-percent-text>90%</span>
                     </div>
                     <div class="progress-bar-thin">
-                      <div class="progress-fill-thin" style="width: 90%;"></div>
+                      <div class="progress-fill-thin" data-percent-fill style="width: 90%;"></div>
                     </div>
                   </div>
 
@@ -377,18 +406,86 @@
                     </div>
                   </div>
 
-                  <div class="breakdown-item">
+                  <div class="breakdown-item" data-breakdown="account">
                     <div class="breakdown-header">
                       <span class="section-title">Account Settings</span>
-                      <span class="section-percentage">50%</span>
+                      <span class="section-percentage" data-percent-text>50%</span>
                     </div>
                     <div class="progress-bar-thin">
-                      <div class="progress-fill-thin warning" style="width: 50%;"></div>
+                      <div class="progress-fill-thin warning" data-percent-fill style="width: 50%;"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
+
+            <!-- Boost Your Score + Completion Rewards — balanced, equal-height pair -->
+            <div class="score-boost-row">
+              <!-- Boost Your Score (live, in-memory preview — nothing is saved) -->
+              <div class="score-card">
+                <div class="score-card-head">
+                  <h4>Boost Your Score</h4>
+                  <span class="preview-tag">Live preview · not saved</span>
+                </div>
+                <div class="quick-complete">
+                  <div class="quick-complete-list" id="quickCompleteList">
+                    <div class="qc-item" data-section="career" data-bump="5">
+                      <div class="qc-item-text">
+                        <div class="qc-item-label">Add a certification</div>
+                        <div class="qc-item-section">Career & Education</div>
+                      </div>
+                      <input class="qc-input" type="text" placeholder="e.g., PMP, AWS">
+                      <button class="qc-add" type="button">Add</button>
+                    </div>
+                    <div class="qc-item" data-section="career" data-bump="5">
+                      <div class="qc-item-text">
+                        <div class="qc-item-label">Add a master course</div>
+                        <div class="qc-item-section">Career & Education</div>
+                      </div>
+                      <input class="qc-input" type="text" placeholder="Course name">
+                      <button class="qc-add" type="button">Add</button>
+                    </div>
+                    <div class="qc-item" data-section="account" data-bump="25">
+                      <div class="qc-item-text">
+                        <div class="qc-item-label">Set a security question</div>
+                        <div class="qc-item-section">Account Settings</div>
+                      </div>
+                      <input class="qc-input" type="text" placeholder="Answer">
+                      <button class="qc-add" type="button">Add</button>
+                    </div>
+                    <div class="qc-item" data-section="account" data-bump="25">
+                      <div class="qc-item-text">
+                        <div class="qc-item-label">Add a recovery email</div>
+                        <div class="qc-item-section">Account Settings</div>
+                      </div>
+                      <input class="qc-input" type="email" placeholder="name@email.com">
+                      <button class="qc-add" type="button">Add</button>
+                    </div>
+                  </div>
+                  <div class="quick-complete-actions">
+                    <button class="qc-reset" id="qcResetBtn" type="button">Reset preview</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Completion Rewards -->
+              <div class="score-card">
+                <div class="score-card-head">
+                  <h4>Completion Rewards</h4>
+                  <a href="#" class="link-accent">How it works</a>
+                </div>
+                <div class="reward-count-row">
+                  <span class="reward-count">4</span>
+                  <span class="reward-unit">Badges</span>
+                </div>
+                <p class="reward-desc">Earned for keeping your profile complete and up to date.</p>
+                <div class="reward-stats">
+                  <div class="reward-stat"><div class="n">4</div><div class="l">Earned</div></div>
+                  <div class="reward-stat"><div class="n">2</div><div class="l">In Progress</div></div>
+                  <div class="reward-stat"><div class="n">6</div><div class="l">Total</div></div>
+                </div>
+              </div>
+            </div>
 
             <!-- Learning & Development Overview -->
             <section class="sections-panel mt-30">
@@ -450,51 +547,101 @@
           <!-- Right Column Widget Area -->
           <div class="dashboard-right">
 
-            <!-- Upcoming Events Widget -->
+            <!-- Knowledgebase Widget -->
             <div class="right-widget">
-              <h3>Upcoming Events <svg class="widget-icon" style="stroke:var(--accent);">
-                  <use href="#icon-trophy"></use>
-                </svg></h3>
-              <div class="event-list">
-                <div class="event-item">
-                  <div class="event-date">
-                    <span class="day">15</span>
-                    <span class="month">Apr</span>
+              <h3>Knowledgebase <a href="#" class="link-accent">View All →</a></h3>
+              <div class="list-rows">
+                <div class="list-row">
+                  <div class="list-icon"><svg><use href="#icon-document"></use></svg></div>
+                  <div>
+                    <div class="list-title">Employee Handbook 2026</div>
+                    <div class="list-sub">HR Admin • Updated 2 weeks ago</div>
                   </div>
-                  <div class="event-details">
-                    <h4>Company Townhall</h4>
-                    <p>Main Auditorium • 10:00 AM</p>
-                  </div>
+                  <span class="list-tag">Policy</span>
                 </div>
-                <div class="event-item">
-                  <div class="event-date">
-                    <span class="day">22</span>
-                    <span class="month">Apr</span>
+                <div class="list-row">
+                  <div class="list-icon"><svg><use href="#icon-id"></use></svg></div>
+                  <div>
+                    <div class="list-title">Leave & Attendance Guide</div>
+                    <div class="list-sub">HR Admin • Updated a month ago</div>
                   </div>
-                  <div class="event-details">
-                    <h4>Earth Day Retreat</h4>
-                    <p>Central Park • 2:00 PM</p>
-                  </div>
+                  <span class="list-tag">Guide</span>
                 </div>
-                <div class="event-item">
-                  <div class="event-date"
-                    style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: var(--success);">
-                    <span class="day">01</span>
-                    <span class="month">May</span>
+                <div class="list-row">
+                  <div class="list-icon"><svg><use href="#icon-bank"></use></svg></div>
+                  <div>
+                    <div class="list-title">Reimbursement Process</div>
+                    <div class="list-sub">Finance Team • Updated a year ago</div>
                   </div>
-                  <div class="event-details">
-                    <h4>Labor Day Holiday</h4>
-                    <p>Office Closed</p>
-                  </div>
+                  <span class="list-tag">Finance</span>
                 </div>
+              </div>
+            </div>
+
+            <!-- Calendar Widget (replaces the old plain "Upcoming Events" list) -->
+            <div class="right-widget calendar-widget">
+              <div class="calendar-head">
+                <h3 style="margin:0;">Calendar</h3>
+                <div class="calendar-month-nav">
+                  <button type="button" id="calPrev" aria-label="Previous month">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  </button>
+                  <span class="cal-month-label" id="calMonthLabel">August 2026</span>
+                  <button type="button" id="calNext" aria-label="Next month">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="cal-view-tabs" id="calViewTabs">
+                <button type="button" class="cal-view-tab" data-view="day">Day</button>
+                <button type="button" class="cal-view-tab" data-view="week">Week</button>
+                <button type="button" class="cal-view-tab active" data-view="month">Month</button>
+              </div>
+
+              <div class="calendar-grid-labels">
+                <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+              </div>
+              <div class="calendar-grid" id="calendarGrid"></div>
+
+              <div class="calendar-agenda">
+                <div class="calendar-agenda-date" id="calAgendaDate">Tuesday, Aug 11</div>
+                <div id="calAgendaList"></div>
+              </div>
+            </div>
+
+            <!-- Quick Links (moved here — a fixed, structured sidebar widget) -->
+            <div class="right-widget mt-30" style="margin-top: 30px;">
+              <h3>Quick Links <span class="pill-soft">Portals</span></h3>
+              <div class="quicklink-item">
+                <div class="quicklink-icon" style="background:#10b981;"><svg><use href="#icon-bank"></use></svg></div>
+                <div>
+                  <div class="quicklink-title">Payroll Portal</div>
+                  <div class="quicklink-sub">Payslips & tax forms</div>
+                </div>
+                <span class="quicklink-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+              </div>
+              <div class="quicklink-item">
+                <div class="quicklink-icon" style="background:#f59e0b;"><svg><use href="#icon-stethoscope"></use></svg></div>
+                <div>
+                  <div class="quicklink-title">HR Helpdesk</div>
+                  <div class="quicklink-sub">Raise a support ticket</div>
+                </div>
+                <span class="quicklink-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+              </div>
+              <div class="quicklink-item">
+                <div class="quicklink-icon" style="background:#4f46e5;"><svg><use href="#icon-graduation"></use></svg></div>
+                <div>
+                  <div class="quicklink-title">Learning Hub</div>
+                  <div class="quicklink-sub">Courses & certifications</div>
+                </div>
+                <span class="quicklink-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
               </div>
             </div>
 
             <!-- My Team Widget -->
             <div class="right-widget mt-30" style="margin-top: 30px;">
-              <h3>My Team <svg class="widget-icon" style="stroke:var(--success);">
-                  <use href="#icon-user"></use>
-                </svg></h3>
+              <h3>My Team <a href="#" class="link-accent">View All →</a></h3>
               <div class="team-list" style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
                 <div class="team-member"
                   style="display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
@@ -524,6 +671,9 @@
 
           </div>
         </div>
+
+        <!-- Ephemeral preview toast (session-only, nothing is ever written to storage) -->
+        <div class="preview-toast" id="previewToast"><span class="dot-live"></span><span id="previewToastText"></span></div>
 
       </div>
 
@@ -591,6 +741,329 @@
         }
       }
     });
+  </script>
+
+  <!-- ============================================================
+       LIVE, IN-MEMORY-ONLY DASHBOARD INTERACTIONS
+       Nothing here writes to a database, localStorage, cookies, or
+       any other storage — every value resets the moment the page
+       reloads. It exists purely to preview the *effect* of filling
+       a field before the person commits to the real form.
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      /* ---------- 1) Employee Pulse mood check-in (session-only) ---------- */
+      var moodRow = document.getElementById('moodRow');
+      var pulseFeedback = document.getElementById('pulseFeedback');
+      if (moodRow) {
+        moodRow.addEventListener('click', function (e) {
+          var btn = e.target.closest('.mood-btn');
+          if (!btn) return;
+          moodRow.querySelectorAll('.mood-btn').forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          pulseFeedback.innerHTML = 'Thanks for sharing — logged as <strong>' + btn.dataset.mood + '</strong> for today. Visible only to you.';
+        });
+      }
+
+      /* ---------- 2) Weekly task tracker (session-only) ---------- */
+      var markTodayBtn = document.getElementById('markTodayBtn');
+      var weekTaskNum = document.getElementById('weekTaskNum');
+      var weekTaskFill = document.getElementById('weekTaskFill');
+      var weekTotal = 5;
+      var weekDone = 2;
+
+      function renderWeekTasks() {
+        weekTaskNum.textContent = weekDone;
+        weekTaskFill.style.width = Math.round((weekDone / weekTotal) * 100) + '%';
+      }
+
+      if (markTodayBtn) {
+        markTodayBtn.addEventListener('click', function () {
+          if (weekDone >= weekTotal) return;
+          weekDone += 1;
+          renderWeekTasks();
+          markTodayBtn.textContent = 'Reviewed ✓';
+          markTodayBtn.disabled = true;
+          var todayDot = document.querySelector('.week-day.today');
+          if (todayDot) todayDot.classList.add('done');
+        });
+      }
+
+      var viewPendingBtn = document.getElementById('viewPendingBtn');
+      if (viewPendingBtn) {
+        viewPendingBtn.addEventListener('click', function () {
+          document.querySelector('.quick-complete').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+
+      /* ---------- 3) Quick Complete: live completion preview ---------- */
+      // Snapshot of the ORIGINAL saved state, so "Reset preview" can restore it exactly.
+      var savedState = {
+        overall: 95,
+        breakdowns: {
+          career: 90,
+          account: 50
+        }
+      };
+      // Working copy that only lives in this tab's memory.
+      var previewState = JSON.parse(JSON.stringify(savedState));
+
+      var overallCircle = document.getElementById('overallProgressCircle');
+      var overallPercentText = document.getElementById('overallPercentText');
+      var CIRCUMFERENCE = 283; // matches r=45 circle already used in the markup
+
+      function setOverall(pct) {
+        pct = Math.max(0, Math.min(100, pct));
+        previewState.overall = pct;
+        overallPercentText.textContent = pct + '%';
+        overallCircle.style.strokeDashoffset = Math.round(CIRCUMFERENCE * (1 - pct / 100));
+      }
+
+      function setBreakdown(section, pct) {
+        pct = Math.max(0, Math.min(100, pct));
+        previewState.breakdowns[section] = pct;
+        var row = document.querySelector('.breakdown-item[data-breakdown="' + section + '"]');
+        if (!row) return;
+        var fill = row.querySelector('[data-percent-fill]');
+        var text = row.querySelector('[data-percent-text]');
+        fill.style.width = pct + '%';
+        text.textContent = pct + '%';
+        fill.classList.toggle('success', pct >= 100);
+        fill.classList.toggle('warning', pct < 60);
+      }
+
+      var toast = document.getElementById('previewToast');
+      var toastText = document.getElementById('previewToastText');
+      var toastTimer = null;
+      function showToast(msg) {
+        toastText.textContent = msg;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 3200);
+      }
+
+      var quickCompleteList = document.getElementById('quickCompleteList');
+      if (quickCompleteList) {
+        quickCompleteList.addEventListener('click', function (e) {
+          var addBtn = e.target.closest('.qc-add');
+          if (!addBtn) return;
+          var item = addBtn.closest('.qc-item');
+          var input = item.querySelector('.qc-input');
+
+          if (item.classList.contains('done')) return;
+          if (!input.value.trim()) {
+            input.focus();
+            input.style.borderColor = 'var(--danger)';
+            setTimeout(function () { input.style.borderColor = ''; }, 900);
+            return;
+          }
+
+          var section = item.dataset.section;
+          var bump = parseInt(item.dataset.bump, 10) || 5;
+
+          // Bump the specific section's breakdown bar…
+          var newSectionPct = Math.min(100, (previewState.breakdowns[section] || 0) + bump);
+          setBreakdown(section, newSectionPct);
+
+          // …and nudge the overall strength ring a little.
+          setOverall(previewState.overall + 1);
+
+          // Lock the row so it can't be "added" twice, and show it as done.
+          input.disabled = true;
+          addBtn.remove();
+          item.classList.add('done');
+          var check = document.createElement('span');
+          check.className = 'qc-check';
+          check.textContent = '✓';
+          item.appendChild(check);
+
+          var label = item.querySelector('.qc-item-label').textContent;
+          showToast('"' + label + '" added — this is a live preview only, nothing has been saved yet.');
+        });
+      }
+
+      var qcResetBtn = document.getElementById('qcResetBtn');
+      if (qcResetBtn) {
+        qcResetBtn.addEventListener('click', function () {
+          previewState = JSON.parse(JSON.stringify(savedState));
+          setOverall(previewState.overall);
+          setBreakdown('career', previewState.breakdowns.career);
+          setBreakdown('account', previewState.breakdowns.account);
+
+          quickCompleteList.querySelectorAll('.qc-item').forEach(function (item) {
+            item.classList.remove('done');
+            var input = item.querySelector('.qc-input');
+            var check = item.querySelector('.qc-check');
+            input.disabled = false;
+            input.value = '';
+            if (check) check.remove();
+            if (!item.querySelector('.qc-add')) {
+              var btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = 'qc-add';
+              btn.textContent = 'Add';
+              item.appendChild(btn);
+            }
+          });
+          showToast('Preview reset — back to your actual saved completion.');
+        });
+      }
+
+      // Initialize rings/bars to the saved state on load.
+      renderWeekTasks();
+      setOverall(previewState.overall);
+      setBreakdown('career', previewState.breakdowns.career);
+      setBreakdown('account', previewState.breakdowns.account);
+    });
+  </script>
+
+  <!-- ============================================================
+       CALENDAR WIDGET — Day / Week / Month toggle, hover + active +
+       today states, and a brief loading pulse when the view changes.
+       Sample events only; nothing here is persisted either.
+       ============================================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var grid = document.getElementById('calendarGrid');
+      if (!grid) return;
+
+      var monthLabel = document.getElementById('calMonthLabel');
+      var agendaDate = document.getElementById('calAgendaDate');
+      var agendaList = document.getElementById('calAgendaList');
+      var viewTabs = document.getElementById('calViewTabs');
+
+      var today = new Date(2026, 7, 11); // Tue, Aug 11 2026 — matches "today" elsewhere on the dashboard
+      var cursor = new Date(today.getFullYear(), today.getMonth(), 1);
+      var selected = new Date(today);
+      var currentView = 'month';
+
+      var monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+      var dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+      // A few sample events, keyed by YYYY-M-D
+      var events = {};
+      function addEvent(y, m, d, title, time) {
+        var key = y + '-' + m + '-' + d;
+        (events[key] = events[key] || []).push({ title: title, time: time });
+      }
+      addEvent(2026, 7, 11, 'Mark today\\'s tasks reviewed', 'Anytime');
+      addEvent(2026, 7, 14, 'Priya Raman — Work Anniversary', 'All day');
+      addEvent(2026, 7, 15, 'Company Townhall', '10:00 AM · Main Auditorium');
+      addEvent(2026, 7, 15, 'Charlie Davis — Birthday', 'All day');
+      addEvent(2026, 7, 22, 'Earth Day Retreat', '2:00 PM · Central Park');
+      addEvent(2026, 8, 1, 'Labor Day Holiday', 'Office Closed');
+
+      function sameDay(a, b) {
+        return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate();
+      }
+
+      function renderAgenda(date) {
+        agendaDate.textContent = dayNames[date.getDay()] + ', ' + monthNames[date.getMonth()].slice(0, 3) + ' ' + date.getDate();
+        var key = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate();
+        var list = events[key] || [];
+        if (!list.length) {
+          agendaList.innerHTML = '<div class="calendar-agenda-empty">Nothing on the calendar for this day.</div>';
+          return;
+        }
+        agendaList.innerHTML = list.map(function (e) {
+          return '<div class="calendar-agenda-item"><span class="dot"></span><div><div class="title">' + e.title + '</div><div class="time">' + e.time + '</div></div></div>';
+        }).join('');
+      }
+
+      function renderMonthGrid() {
+        monthLabel.textContent = monthNames[cursor.getMonth()] + ' ' + cursor.getFullYear();
+
+        var firstOfMonth = new Date(cursor.getFullYear(), cursor.getMonth(), 1);
+        var startOffset = firstOfMonth.getDay(); // 0=Sun
+        var daysInMonth = new Date(cursor.getFullYear(), cursor.getMonth() + 1, 0).getDate();
+        var daysInPrevMonth = new Date(cursor.getFullYear(), cursor.getMonth(), 0).getDate();
+
+        var cells = [];
+        for (var i = startOffset - 1; i >= 0; i--) {
+          cells.push({ day: daysInPrevMonth - i, outside: true });
+        }
+        for (var d = 1; d <= daysInMonth; d++) {
+          cells.push({ day: d, outside: false, date: new Date(cursor.getFullYear(), cursor.getMonth(), d) });
+        }
+        while (cells.length % 7 !== 0) {
+          cells.push({ day: cells.length - (startOffset + daysInMonth) + 1, outside: true });
+        }
+
+        grid.innerHTML = cells.map(function (c) {
+          if (c.outside) return '<div class="calendar-day outside">' + c.day + '</div>';
+          var key = c.date.getFullYear() + '-' + c.date.getMonth() + '-' + c.date.getDate();
+          var hasEvent = !!events[key];
+          var isToday = sameDay(c.date, today);
+          var isSelected = sameDay(c.date, selected);
+          var cls = 'calendar-day' + (isToday ? ' today' : '') + (isSelected ? ' selected' : '');
+          return '<button type="button" class="' + cls + '" data-day="' + c.day + '">' + c.day + (hasEvent ? '<span class="evt-dot"></span>' : '') + '</button>';
+        }).join('');
+
+        grid.querySelectorAll('.calendar-day:not(.outside)').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            selected = new Date(cursor.getFullYear(), cursor.getMonth(), parseInt(btn.dataset.day, 10));
+            grid.querySelectorAll('.calendar-day').forEach(function (b) { b.classList.remove('selected'); });
+            btn.classList.add('selected');
+            renderAgenda(selected);
+          });
+        });
+      }
+
+      function transitionRender(renderFn) {
+        grid.classList.add('loading');
+        setTimeout(function () {
+          renderFn();
+          grid.classList.remove('loading');
+        }, 180); // brief, deliberate loading pulse — matches the 150–200ms interaction scale
+      }
+
+      document.getElementById('calPrev').addEventListener('click', function () {
+        cursor.setMonth(cursor.getMonth() - 1);
+        transitionRender(renderMonthGrid);
+      });
+      document.getElementById('calNext').addEventListener('click', function () {
+        cursor.setMonth(cursor.getMonth() + 1);
+        transitionRender(renderMonthGrid);
+      });
+
+      if (viewTabs) {
+        viewTabs.addEventListener('click', function (e) {
+          var tab = e.target.closest('.cal-view-tab');
+          if (!tab) return;
+          viewTabs.querySelectorAll('.cal-view-tab').forEach(function (t) { t.classList.remove('active'); });
+          tab.classList.add('active');
+          currentView = tab.dataset.view;
+          // Month/Week/Day share the same grid for this preview; Week/Day simply
+          // re-center the agenda on the selected day for now.
+          transitionRender(renderMonthGrid);
+        });
+      }
+
+      renderMonthGrid();
+      renderAgenda(selected);
+    });
+  </script>
+  <script>
+    (function () {
+      var tip = document.createElement('div');
+      tip.className = 'nav-tooltip';
+      document.body.appendChild(tip);
+      document.querySelectorAll('.sidebar .nav-item[title]').forEach(function (item) {
+        var label = item.getAttribute('title');
+        item.removeAttribute('title'); // avoid a duplicate native tooltip
+        item.addEventListener('mouseenter', function () {
+          var r = item.getBoundingClientRect();
+          tip.textContent = label;
+          tip.style.top = (r.top + r.height / 2) + 'px';
+          tip.style.left = (r.right + 10) + 'px';
+          tip.classList.add('show');
+        });
+        item.addEventListener('mouseleave', function () {
+          tip.classList.remove('show');
+        });
+      });
+    })();
   </script>
 </body>
 
