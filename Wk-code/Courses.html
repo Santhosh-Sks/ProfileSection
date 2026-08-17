@@ -106,89 +106,28 @@
 
       <!-- SIDEBAR -->
       <aside class="sidebar">
-         <div class="sidebar-header">
-            <div class="brand">WorkLine</div>
-         </div>
-         <nav class="sidebar-nav">
-            <div class="nav-section">
-               <a href="../index.html" class="nav-item"><svg>
-                     <use href="#icon-home"></use>
-                  </svg> Dashboard</a>
-               <a href="Directory.html" class="nav-item"><svg>
-                     <use href="#icon-user"></use>
-                  </svg> Employee Directory</a>
-            </div>
-            <div class="nav-section">
-               <h4>Personal Info</h4>
-               <a href="BasicDetails.html" class="nav-item"><svg>
-                     <use href="#icon-user"></use>
-                  </svg> Basic Details <span class="nav-badge">100%</span></a>
-               <a href="Family.html" class="nav-item"><svg>
-                     <use href="#icon-family"></use>
-                  </svg> Family & Relatives</a>
-               <a href="Contact.html" class="nav-item"><svg>
-                     <use href="#icon-phone"></use>
-                  </svg> Contact Info</a>
-               <a href="Emergency.html" class="nav-item"><svg>
-                     <use href="#icon-phone"></use>
-                  </svg> Emergency Contacts</a>
-            </div>
-            <div class="nav-section">
-               <h4>Career & Ed</h4>
-               <a href="Academic.html" class="nav-item"><svg>
-                     <use href="#icon-graduation"></use>
-                  </svg> Academic Quals <span class="nav-badge">100%</span></a>
-               <a href="Courses.html" class="nav-item active"><svg>
-                     <use href="#icon-building"></use>
-                  </svg> Master Courses</a>
-               <a href="Skills.html" class="nav-item"><svg>
-                     <use href="#icon-gear"></use>
-                  </svg> Core Skills</a>
-               <a href="Language.html" class="nav-item"><svg>
-                     <use href="#icon-language"></use>
-                  </svg> Language Skills</a>
-               <a href="Employment.html" class="nav-item"><svg>
-                     <use href="#icon-briefcase"></use>
-                  </svg> Prev. Employment <span class="nav-badge">100%</span></a>
-               <a href="Achievements.html" class="nav-item"><svg>
-                     <use href="#icon-trophy"></use>
-                  </svg> Achievements</a>
-               <a href="Membership.html" class="nav-item"><svg>
-                     <use href="#icon-tag"></use>
-                  </svg> Memberships</a>
-            </div>
-            <div class="nav-section">
-               <h4>Documents</h4>
-               <a href="Passport.html" class="nav-item"><svg>
-                     <use href="#icon-passport"></use>
-                  </svg> Passport</a>
-               <a href="License.html" class="nav-item"><svg>
-                     <use href="#icon-car"></use>
-                  </svg> Driving License</a>
-               <a href="ID.html" class="nav-item"><svg>
-                     <use href="#icon-id"></use>
-                  </svg> Identity Cards <span class="nav-badge">100%</span></a>
-            </div>
-            <div class="nav-section">
-               <h4>Health & Financial</h4>
-               <a href="Medical.html" class="nav-item"><svg>
-                     <use href="#icon-stethoscope"></use>
-                  </svg> Medical Data <span class="nav-badge">100%</span></a>
-               <a href="Bank.html" class="nav-item"><svg>
-                     <use href="#icon-bank"></use>
-                  </svg> Bank Info</a>
-            </div>
-            <div class="nav-section">
-               <h4>Settings</h4>
-               <a href="Photo.html" class="nav-item"><svg>
-                     <use href="#icon-camera"></use>
-                  </svg> Update Photo</a>
-               <a href="#" class="nav-item"><svg>
-                     <use href="#icon-logout"></use>
-                  </svg> Log out</a>
-            </div>
-         </nav>
-      </aside>
+      <div class="sidebar-header"><span class="brand-mark" title="WorkLine"></span></div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <a href="../index.html" class="nav-item" title="Dashboard"><svg>
+              <use href="#icon-home"></use>
+            </svg><span class="nav-label">Dashboard</span></a>
+          <a href="Home.html" class="nav-item" title="Journey"><svg>
+              <use href="#icon-trophy"></use>
+            </svg><span class="nav-label">Journey</span></a>
+          <a href="Directory.html" class="nav-item" title="Employee Directory"><svg>
+              <use href="#icon-user"></use>
+            </svg><span class="nav-label">Employee Directory</span></a>
+        </div>
+        <div class="nav-section">
+          <h4>Categories</h4>
+          <a href="hub-personal.html" class="nav-item category-nav-item" title="Personal — 4 modules"><svg><use href="#icon-family"></use></svg><span class="cat-text">Personal<small>4 modules</small></span></a>
+          <a href="hub-career.html" class="nav-item active category-nav-item" title="Career & Education — 6 modules"><svg><use href="#icon-briefcase"></use></svg><span class="cat-text">Career & Education<small>6 modules</small></span></a>
+          <a href="hub-documents.html" class="nav-item category-nav-item" title="Documents & Records — 6 modules"><svg><use href="#icon-id"></use></svg><span class="cat-text">Documents & Records<small>6 modules</small></span></a>
+          <a href="hub-settings.html" class="nav-item category-nav-item" title="Settings — 2 modules"><svg><use href="#icon-gear"></use></svg><span class="cat-text">Settings<small>2 modules</small></span></a>
+        </div>
+      </nav>
+    </aside>
 
       <!-- MAIN CONTENT -->
       <main class="main-content">
@@ -465,6 +404,27 @@
       }
    });
 </script>
+  <script>
+    (function () {
+      var tip = document.createElement('div');
+      tip.className = 'nav-tooltip';
+      document.body.appendChild(tip);
+      document.querySelectorAll('.sidebar .nav-item[title]').forEach(function (item) {
+        var label = item.getAttribute('title');
+        item.removeAttribute('title'); // avoid a duplicate native tooltip
+        item.addEventListener('mouseenter', function () {
+          var r = item.getBoundingClientRect();
+          tip.textContent = label;
+          tip.style.top = (r.top + r.height / 2) + 'px';
+          tip.style.left = (r.right + 10) + 'px';
+          tip.classList.add('show');
+        });
+        item.addEventListener('mouseleave', function () {
+          tip.classList.remove('show');
+        });
+      });
+    })();
+  </script>
 </body>
 
 
