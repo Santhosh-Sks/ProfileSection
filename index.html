@@ -215,21 +215,26 @@
       <!-- Content Area -->
       <div class="content-wrapper">
 
-        <!-- LinkedIn-style Profile Card -->
-        <!-- Compact identity strip (no cover photo / LinkedIn-style banner) -->
-        <div class="identity-strip">
-          <div class="identity-left">
-            <div class="avatar-medium">S</div>
-            <div>
-              <div class="identity-name">Santhosh <span class="emp-id">[1102]</span> <span class="status active">Active Role</span></div>
-              <div class="identity-role">Software Engineer at WorkLine • UI/UX Specialist • Bangalore, India</div>
+        <!-- Profile Summary Card -->
+        <section class="profile-banner">
+          <div class="profile-left">
+            <div class="avatar">S</div>
+            <div class="profile-info">
+              <h2 class="employee-name">
+                Santhosh <span class="emp-id">[1102]</span>
+                <span class="status active">Active Role</span>
+              </h2>
+              <p class="professional-headline">Software Engineer at WorkLine • UI/UX Specialist • Bangalore, India</p>
             </div>
           </div>
-          <div class="identity-right">
-            <span class="identity-badge approved">✓ Profile Approved</span>
-            <span class="identity-badge percent">95% Complete</span>
+
+          <div class="profile-right">
+            <div class="panel-badge">
+              <span class="approved">Profile Approved</span>
+              <span class="percent">95% Complete</span>
+            </div>
           </div>
-        </div>
+        </section>
 
         <!-- Celebrations — a slim strip in the primary feed, so it never
              breaks the card grid's vertical rhythm below it -->
@@ -286,51 +291,6 @@
               <button class="mood-btn" data-mood="Rough">😞</button>
             </div>
             <div class="pulse-feedback" id="pulseFeedback">Your check-in stays private to you — nothing is saved.</div>
-          </div>
-        </div>
-
-        <!-- ============ WEEKLY ATTENDANCE ============ -->
-        <div class="attendance-panel">
-          <div class="week-card-head">
-            <div>
-              <div class="week-card-title">Weekly Attendance</div>
-              <div class="week-card-sub">Week of Aug 10 – 16</div>
-            </div>
-            <span class="pill-success" id="attendanceStatusPill">Present</span>
-          </div>
-
-          <div class="week-strip">
-            <div class="week-day done"><span class="now-tag">&nbsp;</span><span class="dot"></span>Mon<span>10</span></div>
-            <div class="week-day today"><span class="now-tag">Now</span><span class="dot"></span>Tue<span>11</span></div>
-            <div class="week-day wfh"><span class="now-tag">&nbsp;</span><span class="dot"></span>Wed<span>12</span></div>
-            <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Thu<span>13</span></div>
-            <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Fri<span>14</span></div>
-            <div class="week-day off"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sat<span>15</span></div>
-            <div class="week-day off"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sun<span>16</span></div>
-          </div>
-
-          <div class="attendance-legend">
-            <span><span class="dot present"></span> Present</span>
-            <span><span class="dot wfh"></span> WFH</span>
-            <span><span class="dot off"></span> Weekend</span>
-          </div>
-
-          <div class="attendance-timeline">
-            <div class="attendance-hours"><span class="num" id="attHoursNum">02:12</span><span class="of">hrs today</span></div>
-            <div class="progress-bar-thin"><div class="progress-fill-thin" id="attProgressFill" style="width: 20%;"></div></div>
-            <div class="attendance-time-labels"><span>10:00 AM</span><span>06:30 PM</span></div>
-          </div>
-
-          <div class="attendance-actions">
-            <div class="attendance-checkin-chip" id="attCheckinChip">
-              <span class="time">09:39 AM</span>
-              <span class="lbl">Checked In</span>
-            </div>
-            <button class="btn-outline-soft" id="attCheckoutBtn" type="button">← Check Out</button>
-          </div>
-
-          <div class="attendance-confirm" id="attConfirmBanner">
-            <span class="dot"></span> <span id="attConfirmText">Checked in at 09:39 AM</span>
           </div>
         </div>
 
@@ -609,6 +569,62 @@
           <!-- Right Column Widget Area -->
           <div class="dashboard-right">
 
+            <!-- Weekly Attendance Widget -->
+            <div class="right-widget weekly-attendance-widget">
+              <h3>Weekly Attendance <span class="pill-soft">Aug 10 – Aug 16</span></h3>
+
+              <div class="wa-days">
+                <div class="wa-day is-present">
+                  <span class="wa-day-name">Mon</span>
+                  <span class="wa-day-date">10</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">9:02 AM</span>
+                </div>
+                <div class="wa-day is-present is-today">
+                  <span class="wa-day-name">Tue</span>
+                  <span class="wa-day-date">11</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">In progress</span>
+                </div>
+                <div class="wa-day is-upcoming">
+                  <span class="wa-day-name">Wed</span>
+                  <span class="wa-day-date">12</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">—</span>
+                </div>
+                <div class="wa-day is-upcoming">
+                  <span class="wa-day-name">Thu</span>
+                  <span class="wa-day-date">13</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">—</span>
+                </div>
+                <div class="wa-day is-upcoming">
+                  <span class="wa-day-name">Fri</span>
+                  <span class="wa-day-date">14</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">—</span>
+                </div>
+                <div class="wa-day is-weekend">
+                  <span class="wa-day-name">Sat</span>
+                  <span class="wa-day-date">15</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">Off</span>
+                </div>
+                <div class="wa-day is-weekend">
+                  <span class="wa-day-name">Sun</span>
+                  <span class="wa-day-date">16</span>
+                  <span class="wa-day-dot"></span>
+                  <span class="wa-day-time">Off</span>
+                </div>
+              </div>
+
+              <div class="reward-stats wa-summary">
+                <div class="reward-stat"><div class="n">2<span style="font-size:12px;">/2</span></div><div class="l">Present</div></div>
+                <div class="reward-stat"><div class="n">14.6<span style="font-size:12px;">h</span></div><div class="l">Hours logged</div></div>
+                <div class="reward-stat"><div class="n">100<span style="font-size:12px;">%</span></div><div class="l">On-time</div></div>
+              </div>
+            </div>
+
             <!-- Knowledgebase Widget -->
             <div class="right-widget">
               <h3>Knowledgebase <a href="#" class="link-accent">View All →</a></h3>
@@ -825,26 +841,6 @@
           moodRow.querySelectorAll('.mood-btn').forEach(function (b) { b.classList.remove('active'); });
           btn.classList.add('active');
           pulseFeedback.innerHTML = 'Thanks for sharing — logged as <strong>' + btn.dataset.mood + '</strong> for today. Visible only to you.';
-        });
-      }
-
-      /* ---------- Weekly Attendance: Check Out (session-only) ---------- */
-      var attCheckoutBtn = document.getElementById('attCheckoutBtn');
-      if (attCheckoutBtn) {
-        attCheckoutBtn.addEventListener('click', function () {
-          document.getElementById('attHoursNum').textContent = '07:35';
-          document.getElementById('attProgressFill').style.width = '100%';
-          document.getElementById('attendanceStatusPill').textContent = 'Day Complete';
-
-          var chip = document.getElementById('attCheckinChip');
-          chip.classList.add('is-out');
-          chip.querySelector('.time').textContent = '06:31 PM';
-          chip.querySelector('.lbl').textContent = 'Checked Out';
-
-          document.getElementById('attConfirmText').textContent = 'Checked out at 06:31 PM — 07:35 logged today';
-
-          attCheckoutBtn.textContent = 'Checked Out ✓';
-          attCheckoutBtn.disabled = true;
         });
       }
 
