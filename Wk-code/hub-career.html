@@ -239,9 +239,35 @@
       if (!tabs.length || !pane || !content) return;
       var cache = {};
 
-      function render(html) {
-        content.innerHTML = html;
+      function render(entry) {
+        content.innerHTML = entry.html;
         pane.classList.remove('loading');
+        runModuleScript(entry.script);
+      }
+
+      // Each module page's own interactive logic (e.g. a "Do you have
+      // prior experience?" Yes/No toggle) lives in a <script> tag OUTSIDE
+      // the .content-wrapper we fetch, and setting innerHTML never runs
+      // <script> tags anyway — so without this, every module loaded
+      // through the hub would render with zero working JS behind it.
+      // We pull that first module-specific <script> out, rewrite its
+      // DOMContentLoaded wrapper (which will never fire again on this
+      // already-loaded page) into an immediately-invoked function, and
+      // run it fresh against the DOM we just injected.
+      function runModuleScript(code) {
+        if (!code) return;
+        var wrapped = code.replace(
+          /document\.addEventListener\(\s*['"]DOMContentLoaded['"]\s*,\s*function\s*\(\)\s*\{/,
+          '(function () {'
+        );
+        wrapped = wrapped.replace(/\}\)\s*;\s*$/, '})();');
+        try {
+          var s = document.createElement('script');
+          s.textContent = wrapped;
+          content.appendChild(s);
+        } catch (err) {
+          console.error('Module script failed to run:', err);
+        }
       }
 
       function loadModule(src, tab) {
@@ -263,11 +289,14 @@
             var doc = new DOMParser().parseFromString(html, 'text/html');
             var wrap = doc.querySelector('.content-wrapper');
             var inner = wrap ? wrap.innerHTML : '<div class="module-error">This module has no content to preview yet.</div>';
-            cache[src] = inner;
-            render(inner);
+            var firstScript = doc.querySelector('script');
+            var entry = { html: inner, script: firstScript ? firstScript.textContent : '' };
+            cache[src] = entry;
+            render(entry);
           })
           .catch(function () {
-            render('<div class="module-error">This module could not be loaded inline — that usually means the project is being opened from disk rather than a local server. <a href="' + src + '">Open ' + tab.querySelector('.module-tab-text').firstChild.textContent + ' directly</a> instead.</div>');
+            content.innerHTML = '<div class="module-error">This module could not be loaded inline — that usually means the project is being opened from disk rather than a local server. <a href="' + src + '">Open ' + tab.querySelector('.module-tab-text').firstChild.textContent + ' directly</a> instead.</div>';
+            pane.classList.remove('loading');
           });
       }
 
