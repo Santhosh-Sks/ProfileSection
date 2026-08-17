@@ -34,6 +34,16 @@
   --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 }
 
+/* Universal box-sizing reset — without this, elements that combine a
+   fixed/percentage width with padding or a border render wider than
+   their box, which was quietly overflowing the right edge of the page
+   (content-wrapper, right-widget, journey-grid, etc.) and made the
+   right-hand column look slightly clipped / not aligned with the rest
+   of the layout. */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 /* Page base */
 body {
   font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -48,7 +58,7 @@ body {
 /* App Container (Dashboard Layout) */
 .app-container {
   display: grid;
-  grid-template-columns: 84px minmax(0, 1fr);
+  grid-template-columns: 84px 1fr;
   min-height: 100vh;
 }
 
@@ -285,6 +295,7 @@ body {
 .main-content {
   display: flex;
   flex-direction: column;
+  min-width: 0; /* let this grid track shrink to fit instead of overflowing right */
 }
 
 /* Top Navigation Bar */
@@ -562,6 +573,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  min-width: 0;
   box-sizing: border-box;
 }
 
@@ -1029,8 +1041,12 @@ body {
 /* Dashboard Grid Layout */
 .dashboard-main-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-columns: 2fr 1fr;
   gap: 30px;
+}
+
+.dashboard-main-grid > div {
+  min-width: 0; /* stop the 1fr right column from being pushed off the right edge */
 }
 
 @media (max-width: 1024px) {
@@ -1049,6 +1065,87 @@ body {
 
 .w-100 {
   width: 100%;
+}
+
+/* Weekly Attendance Widget */
+.wa-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin: 4px 0 18px;
+}
+
+.wa-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 2px 12px;
+  border-radius: 12px;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  text-align: center;
+  min-width: 0;
+}
+
+.wa-day-name {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text-muted);
+}
+
+.wa-day-date {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.wa-day-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+}
+
+.wa-day-time {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.wa-day.is-present .wa-day-dot {
+  background: var(--success);
+}
+
+.wa-day.is-present .wa-day-time {
+  color: var(--success);
+}
+
+.wa-day.is-today {
+  border-color: var(--accent);
+  background: rgba(79, 70, 229, 0.06);
+}
+
+.wa-day.is-today .wa-day-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.18);
+}
+
+.wa-day.is-today .wa-day-time {
+  color: var(--accent);
+}
+
+.wa-day.is-upcoming {
+  opacity: 0.55;
+}
+
+.wa-day.is-weekend {
+  background: transparent;
+  border-style: dashed;
+  opacity: 0.6;
 }
 
 /* Right Widgets */
@@ -1450,239 +1547,12 @@ body {
   background: #fafbfe !important;
 }
 
-/* LinkedIn Profile Card style */
-.profile-banner.linkedin-style {
-  display: block;
-  position: relative;
-  background: var(--card);
-  border-radius: 16px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-light);
-  overflow: hidden;
-  padding: 0;
-  margin-bottom: 30px;
-}
-
-.profile-cover {
-  height: 160px;
-  background: linear-gradient(135deg, #090d16 0%, #1e293b 50%, #3b82f6 100%);
-  position: relative;
-  z-index: 1;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-}
-
-.cover-text-brand {
-  position: absolute;
-  right: 32px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;
-  z-index: 10;
-  text-align: right;
-}
-
-.cover-text-brand h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
-  background: linear-gradient(180deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.1;
-}
-
-.cover-text-brand p {
-  margin: 6px 0 0 0;
-  font-size: 15px;
-  font-weight: 500;
-  font-style: italic;
-  opacity: 0.85;
-  letter-spacing: 0.2px;
-}
-
-.profile-cover::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.15;
-  background-image: radial-gradient(circle at 80% 20%, #ffffff 10%, transparent 20%),
-                    radial-gradient(circle at 15% 75%, #ffffff 15%, transparent 25%);
-}
-
-.profile-content-wrap {
-  padding: 24px 32px 32px 32px;
-  position: relative;
-  z-index: 2;
-  background: var(--card);
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  border-top: 1px solid var(--border-light);
-}
-
-.profile-avatar-container {
-  position: absolute;
-  top: -90px;
-  left: 32px;
-  z-index: 5;
-}
-
-.profile-avatar-container .avatar-large {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 4px solid var(--card);
-  background: var(--accent-gradient);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 56px;
-  font-weight: 800;
-  box-shadow: var(--shadow-lg);
-}
-
-.profile-meta-grid {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 30px;
-  align-items: start;
-}
-
-.profile-info-block {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.profile-info-block .employee-name {
-  font-size: 26px;
-  font-weight: 700;
-  letter-spacing: -0.6px;
-  color: var(--text);
-  margin-bottom: 2px;
-}
-
+/* Profile Summary Card — simple, consistent with the rest of the dashboard (no cover-photo/banner treatment) */
 .professional-headline {
   font-size: 15px;
-  color: var(--text);
-  margin: 0;
-  font-weight: 400;
-}
-
-.connections-count {
-  font-size: 13.5px;
   color: var(--text-muted);
-  margin-top: 4px;
-}
-
-.connections-count .count-value {
-  color: #0a66c2;
-  font-weight: 600;
-}
-
-.connections-count .contact-info-link {
-  color: #0a66c2;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.connections-count .contact-info-link:hover {
-  text-decoration: underline;
-}
-
-.profile-badges-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.profile-actions-bar {
-  display: flex;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.profile-actions-bar .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 18px;
-  font-size: 14.5px;
-  font-weight: 700;
-  border-radius: 99px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  height: 36px;
-  box-sizing: border-box;
-}
-
-.profile-actions-bar .btn-primary {
-  background: #0a66c2;
-  color: #fff;
-  border: none;
-}
-
-.profile-actions-bar .btn-primary:hover {
-  background: #004182;
-}
-
-.profile-actions-bar .btn-outline {
-  background: transparent;
-  color: #0a66c2;
-  border: 1px solid #0a66c2;
-}
-
-.profile-actions-bar .btn-outline:hover {
-  background: rgba(10, 102, 194, 0.06);
-  border-color: #004182;
-  color: #004182;
-}
-
-.profile-actions-bar .btn-secondary {
-  background: transparent;
-  color: var(--text-muted);
-  border: 1px solid var(--text-muted);
-}
-
-.profile-actions-bar .btn-secondary:hover {
-  background: rgba(0, 0, 0, 0.04);
-}
-
-@media (max-width: 768px) {
-  .profile-avatar-container {
-    top: -75px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .profile-avatar-container .avatar-large {
-    width: 100px;
-    height: 100px;
-    font-size: 44px;
-  }
-  .profile-meta-grid {
-    margin-top: 35px;
-    grid-template-columns: 1fr;
-    gap: 15px;
-    text-align: center;
-  }
-  .profile-info-block .employee-name {
-    justify-content: center;
-  }
-  .profile-badges-block {
-    align-items: center;
-  }
-  .profile-actions-bar {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  margin: 4px 0 0;
+  font-weight: 500;
 }
 
 /* Profile Strength Panel */
@@ -1867,7 +1737,7 @@ body {
 
 .pulse-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1.6fr);
+  grid-template-columns: 1fr 1fr 1.5fr 1.6fr;
   gap: 20px;
   margin-bottom: 30px;
 }
@@ -2020,7 +1890,7 @@ body {
 .btn-outline-soft:disabled { opacity: 0.55; cursor: default; }
 
 /* Trio row: rewards / celebrations / quick links */
-.trio-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 30px; }
+.trio-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
 @media (max-width: 900px) { .trio-row { grid-template-columns: 1fr; } }
 
 .trio-card { padding: 22px; }
@@ -2212,7 +2082,7 @@ body {
    ================================================================ */
 .score-boost-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 24px;
   align-items: stretch;
@@ -2457,7 +2327,7 @@ body {
    metaphor: a horizontal track of checkpoints, not a calendar grid.
    ================================================================ */
 .pulse-row-3 {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.6fr);
+  grid-template-columns: 1fr 1fr 1.6fr;
 }
 
 @media (max-width: 900px) {
@@ -2503,7 +2373,7 @@ body {
 .momentum-path {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   padding-top: 6px;
 }
@@ -2651,9 +2521,13 @@ body {
 
 .journey-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-columns: 2fr 1fr;
   gap: 24px;
   align-items: start;
+}
+
+.journey-grid > div {
+  min-width: 0; /* stop the right widget column from overflowing/looking clipped */
 }
 
 @media (max-width: 1000px) {
@@ -2811,100 +2685,3 @@ body {
 .offboard-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 12.5px; }
 .offboard-item .t { font-weight: 700; color: var(--text); }
 .offboard-item .d { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
-
-/* ================================================================
-   IDENTITY STRIP — replaces the LinkedIn-style cover-photo banner
-   with a single, compact row. No cover image, no overlapping avatar.
-   ================================================================ */
-.identity-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  background: var(--card);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 18px 24px;
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 24px;
-}
-
-.identity-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
-
-.avatar-medium {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 17px;
-  font-weight: 800;
-  flex: 0 0 auto;
-  box-shadow: var(--shadow-sm);
-}
-
-.identity-name { font-size: 15px; font-weight: 800; color: var(--text); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.identity-name .emp-id { font-size: 12px; font-weight: 600; color: var(--text-muted); }
-.identity-role { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
-
-.identity-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-.identity-badge {
-  font-size: 11.5px;
-  font-weight: 700;
-  padding: 6px 13px;
-  border-radius: 20px;
-  white-space: nowrap;
-}
-.identity-badge.approved { background: var(--success-bg); color: var(--success); }
-.identity-badge.percent { background: var(--sidebar-active-bg); color: var(--accent); }
-
-/* ================================================================
-   WEEKLY ATTENDANCE — a genuine, functional attendance card (day
-   status strip + live hours-today timeline + check-in/out).
-   ================================================================ */
-.attendance-panel {
-  background: var(--card);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 24px 26px;
-  box-shadow: var(--shadow-sm);
-  margin-bottom: 24px;
-}
-
-.week-day.wfh .dot { background: var(--accent-2); }
-.week-day.off { opacity: 0.45; }
-
-.attendance-legend { display: flex; gap: 16px; margin-top: 12px; font-size: 11px; color: var(--text-muted); font-weight: 600; }
-.attendance-legend .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
-.attendance-legend .dot.present { background: var(--success); }
-.attendance-legend .dot.wfh { background: var(--accent-2); }
-.attendance-legend .dot.off { background: #cbd5e1; }
-
-.attendance-timeline { margin-top: 20px; }
-.attendance-hours { display: flex; align-items: baseline; gap: 6px; margin-bottom: 8px; }
-.attendance-hours .num { font-size: 24px; font-weight: 800; color: var(--text); font-variant-numeric: tabular-nums; }
-.attendance-hours .of { font-size: 12.5px; color: var(--text-muted); font-weight: 600; }
-.attendance-time-labels { display: flex; justify-content: space-between; margin-top: 6px; font-size: 11px; color: var(--text-muted); font-weight: 600; }
-
-.attendance-actions { display: flex; align-items: center; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
-.attendance-checkin-chip {
-  display: flex; flex-direction: column;
-  background: var(--warning-bg); border-radius: 12px; padding: 8px 16px;
-}
-.attendance-checkin-chip .time { font-size: 14px; font-weight: 800; color: var(--warning); }
-.attendance-checkin-chip .lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4px; color: var(--warning); opacity: 0.85; }
-.attendance-checkin-chip.is-out .time,
-.attendance-checkin-chip.is-out .lbl { color: var(--success); }
-.attendance-checkin-chip.is-out { background: var(--success-bg); }
-
-.attendance-confirm {
-  display: flex; align-items: center; gap: 8px;
-  margin-top: 16px; padding: 10px 16px;
-  background: var(--success-bg); border-radius: 10px;
-  font-size: 12.5px; font-weight: 700; color: var(--success);
-}
-.attendance-confirm .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); flex: 0 0 auto; }
