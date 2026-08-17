@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home Screen — Employee Profile Dashboard</title>
-  <link rel="stylesheet" href="Wk-css/style.css">
+  <link rel="stylesheet" href="../Wk-css/style.css">
 </head>
 
 <body>
@@ -123,86 +123,25 @@
 
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <div class="sidebar-header">
-        <div class="brand">WorkLine</div>
-      </div>
+      <div class="sidebar-header"><span class="brand-mark" title="WorkLine"></span></div>
       <nav class="sidebar-nav">
         <div class="nav-section">
-          <a href="Home.html" class="nav-item active"><svg>
+          <a href="../index.html" class="nav-item" title="Dashboard"><svg>
               <use href="#icon-home"></use>
-            </svg> Dashboard</a>
-          <a href="Wk-code/Directory.html" class="nav-item"><svg>
-              <use href="#icon-user"></use>
-            </svg> Employee Directory</a>
-        </div>
-        <div class="nav-section">
-          <h4>Personal Info</h4>
-          <a href="Wk-code/BasicDetails.html" class="nav-item"><svg>
-              <use href="#icon-user"></use>
-            </svg> Basic Details <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Family.html" class="nav-item"><svg>
-              <use href="#icon-family"></use>
-            </svg> Family & Relatives</a>
-          <a href="Wk-code/Contact.html" class="nav-item"><svg>
-              <use href="#icon-phone"></use>
-            </svg> Contact Info</a>
-          <a href="Wk-code/Emergency.html" class="nav-item"><svg>
-              <use href="#icon-phone"></use>
-            </svg> Emergency Contacts</a>
-        </div>
-        <div class="nav-section">
-          <h4>Career & Ed</h4>
-          <a href="Wk-code/Academic.html" class="nav-item"><svg>
-              <use href="#icon-graduation"></use>
-            </svg> Academic Quals <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Courses.html" class="nav-item"><svg>
-              <use href="#icon-building"></use>
-            </svg> Master Courses</a>
-          <a href="Wk-code/Skills.html" class="nav-item"><svg>
-              <use href="#icon-gear"></use>
-            </svg> Core Skills</a>
-          <a href="Wk-code/Language.html" class="nav-item"><svg>
-              <use href="#icon-language"></use>
-            </svg> Language Skills</a>
-          <a href="Wk-code/Employment.html" class="nav-item"><svg>
-              <use href="#icon-briefcase"></use>
-            </svg> Prev. Employment <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Achievements.html" class="nav-item"><svg>
+            </svg><span class="nav-label">Dashboard</span></a>
+          <a href="Home.html" class="nav-item active" title="Journey"><svg>
               <use href="#icon-trophy"></use>
-            </svg> Achievements</a>
-          <a href="Wk-code/Membership.html" class="nav-item"><svg>
-              <use href="#icon-tag"></use>
-            </svg> Memberships</a>
+            </svg><span class="nav-label">Journey</span></a>
+          <a href="Directory.html" class="nav-item" title="Employee Directory"><svg>
+              <use href="#icon-user"></use>
+            </svg><span class="nav-label">Employee Directory</span></a>
         </div>
         <div class="nav-section">
-          <h4>Documents</h4>
-          <a href="Wk-code/Passport.html" class="nav-item"><svg>
-              <use href="#icon-passport"></use>
-            </svg> Passport</a>
-          <a href="Wk-code/License.html" class="nav-item"><svg>
-              <use href="#icon-car"></use>
-            </svg> Driving License</a>
-          <a href="Wk-code/ID.html" class="nav-item"><svg>
-              <use href="#icon-id"></use>
-            </svg> Identity Cards <span class="nav-badge">100%</span></a>
-        </div>
-        <div class="nav-section">
-          <h4>Health & Financial</h4>
-          <a href="Wk-code/Medical.html" class="nav-item"><svg>
-              <use href="#icon-stethoscope"></use>
-            </svg> Medical Data <span class="nav-badge">100%</span></a>
-          <a href="Wk-code/Bank.html" class="nav-item"><svg>
-              <use href="#icon-bank"></use>
-            </svg> Bank Info</a>
-        </div>
-        <div class="nav-section">
-          <h4>Settings</h4>
-          <a href="Wk-code/Photo.html" class="nav-item"><svg>
-              <use href="#icon-camera"></use>
-            </svg> Update Photo</a>
-          <a href="#" class="nav-item"><svg>
-              <use href="#icon-logout"></use>
-            </svg> Log out</a>
+          <h4>Categories</h4>
+          <a href="hub-personal.html" class="nav-item category-nav-item" title="Personal — 4 modules"><svg><use href="#icon-family"></use></svg><span class="cat-text">Personal<small>4 modules</small></span></a>
+          <a href="hub-career.html" class="nav-item category-nav-item" title="Career & Education — 6 modules"><svg><use href="#icon-briefcase"></use></svg><span class="cat-text">Career & Education<small>6 modules</small></span></a>
+          <a href="hub-documents.html" class="nav-item category-nav-item" title="Documents & Records — 6 modules"><svg><use href="#icon-id"></use></svg><span class="cat-text">Documents & Records<small>6 modules</small></span></a>
+          <a href="hub-settings.html" class="nav-item category-nav-item" title="Settings — 2 modules"><svg><use href="#icon-gear"></use></svg><span class="cat-text">Settings<small>2 modules</small></span></a>
         </div>
       </nav>
     </aside>
@@ -213,7 +152,7 @@
       <!-- Top Navigation -->
       <header class="top-bar">
         <div class="top-bar-left">
-          <h2 class="greeting">Welcome back, <span>Santhosh!</span><span
+          <h2 class="greeting">Your Journey, <span>Santhosh</span><span
               style="color: var(--text-muted); font-weight: 500; font-size: 0.9em; margin-left: 8px;">[1102]</span></h2>
         </div>
 
@@ -258,7 +197,7 @@
               <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
               <circle cx="12" cy="7" r="4"></circle>
             </svg> View Profile</a>
-          <a href="Wk-code/BasicDetails.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <a href="BasicDetails.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="3"></circle>
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33">
               </path>
@@ -276,248 +215,248 @@
       <!-- Content Area -->
       <div class="content-wrapper">
 
-        <!-- LinkedIn-style Profile Card -->
-        <section class="profile-banner linkedin-style">
-          <div class="profile-cover">
-            <div class="cover-text-brand">
-              <h1>WorkLine</h1>
-              <p>"The art of simplicity is a puzzle of complexity"</p>
+        <!-- Journey Hero -->
+        <div class="journey-hero">
+          <div class="journey-hero-left">
+            <div class="journey-hero-avatar">S</div>
+            <div>
+              <div class="journey-hero-name">Santhosh Thenraj</div>
+              <div class="journey-hero-role">Software Engineer · Engineering · Chennai</div>
             </div>
           </div>
-          <div class="profile-content-wrap">
-            <div class="profile-avatar-container">
-              <div class="avatar-large">S</div>
-            </div>
-            
-            <div class="profile-meta-grid">
-              <div class="profile-info-block">
-                <h2 class="employee-name">
-                  Santhosh <span class="emp-id">[1102]</span>
-                  <span class="status active">Active Role</span>
-                </h2>
-                <p class="professional-headline">Software Engineer at WorkLine • UI/UX Specialist • Bangalore, India</p>
+          <div class="journey-hero-stat">
+            <div class="big">Day 9 <span style="opacity:.6; font-weight:600; font-size:15px;">of 30</span></div>
+            <div class="lbl">Onboarding · 35% complete</div>
+            <div class="journey-hero-bar"><div class="journey-hero-bar-fill" style="width: 35%;"></div></div>
+          </div>
+        </div>
+
+        <div class="journey-grid">
+          <!-- ============ LEFT: Timeline, Team, Feedback ============ -->
+          <div>
+
+            <!-- Journey Timeline -->
+            <div class="timeline-panel">
+              <div class="timeline-panel-head">
+                <h3>Your Journey at WorkLine</h3>
+                <p>From your first day to full speed — here's where you stand.</p>
               </div>
-              
-              <div class="profile-badges-block">
-                <div class="panel-badge">
-                  <span class="approved">Profile Approved</span>
-                  <span class="percent">95% Complete</span>
+
+              <div class="timeline-spine">
+                <div class="timeline-stage is-done">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-stage-head">
+                    <span class="timeline-stage-title">Pre-boarding</span>
+                    <span class="timeline-stage-when">Completed · Jul 28</span>
+                  </div>
+                </div>
+
+                <div class="timeline-stage is-current">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-stage-head">
+                    <span class="timeline-stage-title">Onboarding</span>
+                    <span class="timeline-stage-tag">In Progress</span>
+                    <span class="timeline-stage-when">Day 9 of 30</span>
+                  </div>
+
+                  <div class="timeline-checklist" id="onboardChecklist">
+                    <div class="checklist-row is-complete">
+                      <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+                      <div class="checklist-text">
+                        <div class="checklist-title">Welcome Message</div>
+                        <div class="checklist-sub">A note from our CEO to new joiners</div>
+                      </div>
+                      <button class="checklist-action is-done" type="button">Read ✓</button>
+                    </div>
+                    <div class="checklist-row is-complete">
+                      <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg></div>
+                      <div class="checklist-text">
+                        <div class="checklist-title">Company Video</div>
+                        <div class="checklist-sub">Our vision, mission & how we work</div>
+                      </div>
+                      <button class="checklist-action is-done" type="button">Watched ✓</button>
+                    </div>
+                    <div class="checklist-row" data-task="ceotalk">
+                      <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></div>
+                      <div class="checklist-text">
+                        <div class="checklist-title">CEO Talk</div>
+                        <div class="checklist-sub">Our services & product offerings</div>
+                      </div>
+                      <button class="checklist-action" type="button">Mark Done</button>
+                    </div>
+                    <div class="checklist-row" data-task="roles">
+                      <div class="checklist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><path d="M20 8v6M23 11h-6"></path></svg></div>
+                      <div class="checklist-text">
+                        <div class="checklist-title">My Roles & Responsibilities</div>
+                        <div class="checklist-sub">What success looks like in your role</div>
+                      </div>
+                      <button class="checklist-action" type="button">View</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-stage">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-stage-head">
+                    <span class="timeline-stage-title" style="color:var(--text-muted);">Probation Review</span>
+                    <span class="timeline-stage-when">Expected · Nov 2026</span>
+                  </div>
+                </div>
+
+                <div class="timeline-stage">
+                  <span class="timeline-dot"></span>
+                  <div class="timeline-stage-head">
+                    <span class="timeline-stage-title" style="color:var(--text-muted);">Confirmed & Growing</span>
+                    <span class="timeline-stage-when">Upcoming</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Team Intro -->
+            <div class="timeline-panel">
+              <div class="timeline-panel-head">
+                <h3>My Team Intro</h3>
+                <p>Key people in your professional network</p>
+              </div>
+              <div class="team-intro-scroll">
+                <div class="team-intro-card">
+                  <div class="team-intro-avatar" style="background: var(--accent);">KK</div>
+                  <div class="team-intro-name">Komaravel K.</div>
+                  <div class="team-intro-role">Director of Engineering</div>
+                  <span class="team-intro-tag">Manager</span>
+                </div>
+                <div class="team-intro-card">
+                  <div class="team-intro-avatar" style="background: #0e7490;">SM</div>
+                  <div class="team-intro-name">Saikiran Murali</div>
+                  <div class="team-intro-role">Founder</div>
+                  <span class="team-intro-tag">Skip Level</span>
+                </div>
+                <div class="team-intro-card">
+                  <div class="team-intro-avatar" style="background: var(--success);">SS</div>
+                  <div class="team-intro-name">Selvakumar S.</div>
+                  <div class="team-intro-role">Associate</div>
+                  <span class="team-intro-tag">Payroll</span>
+                </div>
+                <div class="team-intro-card">
+                  <div class="team-intro-avatar" style="background: var(--warning);">NV</div>
+                  <div class="team-intro-name">Nishana V.</div>
+                  <div class="team-intro-role">Co-Founder</div>
+                  <span class="team-intro-tag">HR Ops</span>
+                </div>
+                <div class="team-intro-card">
+                  <div class="team-intro-avatar" style="background: #be185d;">GP</div>
+                  <div class="team-intro-name">Ganesh Kumar P.</div>
+                  <div class="team-intro-role">Co-Founder</div>
+                  <span class="team-intro-tag">HR Ops</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feedback -->
+            <div class="timeline-panel" style="margin-bottom:0;">
+              <div class="timeline-panel-head">
+                <h3>Check-in Feedback</h3>
+                <p>Short pulse conversations as you settle in</p>
+              </div>
+              <div class="feedback-steps">
+                <div class="feedback-step">
+                  <div class="feedback-step-top">
+                    <span class="feedback-step-title">7th Day Feedback</span>
+                    <span class="status-pill approved">Completed</span>
+                  </div>
+                  <div class="feedback-step-due">Was due 29 Jun 2026</div>
+                </div>
+                <div class="feedback-step">
+                  <div class="feedback-step-top">
+                    <span class="feedback-step-title">30th Day Feedback</span>
+                    <span class="status-pill approved">Completed</span>
+                  </div>
+                  <div class="feedback-step-due">Was due 22 Jul 2026</div>
+                </div>
+                <div class="feedback-step">
+                  <div class="feedback-step-top">
+                    <span class="feedback-step-title">90th Day Feedback</span>
+                    <span class="status-pill pending">Scheduled</span>
+                  </div>
+                  <div class="feedback-step-due">Due 20 Oct 2026</div>
                 </div>
               </div>
             </div>
 
           </div>
-        </section>
 
-        <!-- Dashboard Main Content Grid -->
-        <div class="dashboard-main-grid">
-          <!-- Left Column -->
-          <div class="dashboard-left">
-            <!-- Profile Strength Panel -->
-            <section class="sections-panel profile-strength-panel">
-              <div class="panel-header">
-                <div class="panel-title">Profile Strength & Completion</div>
-              </div>
-              
-              <div class="profile-strength-container">
-                <div class="strength-summary-card">
-                  <div class="circular-progress-wrap">
-                    <svg class="circular-progress" viewBox="0 0 100 100">
-                      <circle class="bg" cx="50" cy="50" r="45"></circle>
-                      <circle class="fg" cx="50" cy="50" r="45" style="stroke-dasharray: 283; stroke-dashoffset: 14;"></circle>
-                    </svg>
-                    <div class="progress-text">
-                      <span class="percentage">95%</span>
-                      <span class="label">Strength</span>
-                    </div>
-                  </div>
-                  <div class="strength-desc">
-                    <h3>All Star Profile</h3>
-                    <p>Your profile is almost complete! A complete profile increases visibility and compliance within the organization.</p>
-                  </div>
-                </div>
-
-                <div class="strength-breakdown">
-                  <div class="breakdown-item">
-                    <div class="breakdown-header">
-                      <span class="section-title">Personal Info</span>
-                      <span class="section-percentage">100%</span>
-                    </div>
-                    <div class="progress-bar-thin">
-                      <div class="progress-fill-thin success" style="width: 100%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="breakdown-item">
-                    <div class="breakdown-header">
-                      <span class="section-title">Career & Education</span>
-                      <span class="section-percentage">90%</span>
-                    </div>
-                    <div class="progress-bar-thin">
-                      <div class="progress-fill-thin" style="width: 90%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="breakdown-item">
-                    <div class="breakdown-header">
-                      <span class="section-title">Documents & IDs</span>
-                      <span class="section-percentage">100%</span>
-                    </div>
-                    <div class="progress-bar-thin">
-                      <div class="progress-fill-thin success" style="width: 100%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="breakdown-item">
-                    <div class="breakdown-header">
-                      <span class="section-title">Health & Financial</span>
-                      <span class="section-percentage">100%</span>
-                    </div>
-                    <div class="progress-bar-thin">
-                      <div class="progress-fill-thin success" style="width: 100%;"></div>
-                    </div>
-                  </div>
-
-                  <div class="breakdown-item">
-                    <div class="breakdown-header">
-                      <span class="section-title">Account Settings</span>
-                      <span class="section-percentage">50%</span>
-                    </div>
-                    <div class="progress-bar-thin">
-                      <div class="progress-fill-thin warning" style="width: 50%;"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Learning & Development Overview -->
-            <section class="sections-panel mt-30">
-              <div class="panel-header">
-                <div class="panel-title">Learning & Development Profile</div>
-              </div>
-
-              <div class="development-grid">
-                <!-- Skills Box -->
-                <div class="dev-box">
-                  <div class="dev-box-header">
-                    <svg class="icon">
-                      <use href="#icon-gear"></use>
-                    </svg>
-                    <h4>Top Skills</h4>
-                  </div>
-                  <div class="skill-tags">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">Web Design</span>
-                    <span class="skill-tag">+3 more</span>
-                  </div>
-                </div>
-
-                <!-- Course Progress -->
-                <div class="dev-box">
-                  <div class="dev-box-header">
-                    <svg class="icon">
-                      <use href="#icon-building"></use>
-                    </svg>
-                    <h4>Current Course</h4>
-                  </div>
-                  <div class="course-info">
-                    <div class="course-name">MERN Stack Masterclass</div>
-                    <div class="progress-bar">
-                      <div class="progress-fill" style="width: 75%;"></div>
-                    </div>
-                    <div class="course-meta">75% Completed</div>
-                  </div>
-                </div>
-
-                <!-- Certification -->
-                <div class="dev-box highlight">
-                  <div class="dev-box-header">
-                    <svg class="icon">
-                      <use href="#icon-trophy"></use>
-                    </svg>
-                    <h4>Latest Certification</h4>
-                  </div>
-                  <div class="cert-info">
-                    <div class="cert-name">AWS Certified Developer</div>
-                    <div class="cert-date">Issued: Jan 2026</div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <!-- Right Column Widget Area -->
+          <!-- ============ RIGHT: Completion, Documents, Offboarding ============ -->
           <div class="dashboard-right">
 
-            <!-- Upcoming Events Widget -->
+            <!-- Profile Completion Checklist -->
             <div class="right-widget">
-              <h3>Upcoming Events <svg class="widget-icon" style="stroke:var(--accent);">
-                  <use href="#icon-trophy"></use>
-                </svg></h3>
-              <div class="event-list">
-                <div class="event-item">
-                  <div class="event-date">
-                    <span class="day">15</span>
-                    <span class="month">Apr</span>
-                  </div>
-                  <div class="event-details">
-                    <h4>Company Townhall</h4>
-                    <p>Main Auditorium • 10:00 AM</p>
-                  </div>
-                </div>
-                <div class="event-item">
-                  <div class="event-date">
-                    <span class="day">22</span>
-                    <span class="month">Apr</span>
-                  </div>
-                  <div class="event-details">
-                    <h4>Earth Day Retreat</h4>
-                    <p>Central Park • 2:00 PM</p>
-                  </div>
-                </div>
-                <div class="event-item">
-                  <div class="event-date"
-                    style="background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: var(--success);">
-                    <span class="day">01</span>
-                    <span class="month">May</span>
-                  </div>
-                  <div class="event-details">
-                    <h4>Labor Day Holiday</h4>
-                    <p>Office Closed</p>
-                  </div>
-                </div>
+              <h3>Profile Completion <span class="pill-success">100%</span></h3>
+              <p style="font-size:11.5px; color:var(--text-muted); margin:-6px 0 12px;">4 / 4 mandatory sections completed</p>
+              <div class="completion-check-list">
+                <div class="check-row"><span class="check-row-label">Personal Info <span class="req">*</span></span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Employee Photo</span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Family Info</span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Contact Information</span><span class="status-pill pending">Pending</span></div>
+                <div class="check-row"><span class="check-row-label">Emergency Contact <span class="req">*</span></span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Education <span class="req">*</span></span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Courses & Certs <span class="req">*</span></span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Language</span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Bank</span><span class="status-pill pending">Pending</span></div>
+                <div class="check-row"><span class="check-row-label">Statutory</span><span class="status-pill approved">Approved</span></div>
+                <div class="check-row"><span class="check-row-label">Skill</span><span class="status-pill approved">Approved</span></div>
               </div>
             </div>
 
-            <!-- My Team Widget -->
+            <!-- Documents & Letters -->
             <div class="right-widget mt-30" style="margin-top: 30px;">
-              <h3>My Team <svg class="widget-icon" style="stroke:var(--success);">
-                  <use href="#icon-user"></use>
-                </svg></h3>
-              <div class="team-list" style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
-                <div class="team-member"
-                  style="display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
-                  <div class="avatar-small shadow-sm" style="background: var(--accent); color: white;">AJ</div>
-                  <div class="member-info">
-                    <h4 style="margin:0; font-size: 14px; color: var(--text);">Alice Johnson</h4>
-                    <p style="margin:0; font-size: 12px; color: var(--text-muted);">UI/UX Designer • Active</p>
-                  </div>
+              <h3>Documents</h3>
+              <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                <p>No documents found</p>
+              </div>
+            </div>
+
+            <div class="right-widget mt-30" style="margin-top: 30px;">
+              <h3>Letters</h3>
+              <div class="empty-state">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <p>No letters found</p>
+              </div>
+              <div class="list-row" style="margin-top:4px;">
+                <div class="list-icon"><svg><use href="#icon-document"></use></svg></div>
+                <div>
+                  <div class="list-title">Employee Terms & Conditions</div>
+                  <div class="list-sub">Shared 2 months ago</div>
                 </div>
-                <div class="team-member"
-                  style="display: flex; align-items: center; gap: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--border);">
-                  <div class="avatar-small shadow-sm" style="background: var(--success); color: white;">BS</div>
-                  <div class="member-info">
-                    <h4 style="margin:0; font-size: 14px; color: var(--text);">Bob Smith</h4>
-                    <p style="margin:0; font-size: 12px; color: var(--text-muted);">Frontend Dev • On Leave</p>
-                  </div>
-                </div>
-                <div class="team-member" style="display: flex; align-items: center; gap: 12px;">
-                  <div class="avatar-small shadow-sm" style="background: var(--warning); color: white;">CD</div>
-                  <div class="member-info">
-                    <h4 style="margin:0; font-size: 14px; color: var(--text);">Charlie Davis</h4>
-                    <p style="margin:0; font-size: 12px; color: var(--text-muted);">Backend Dev • Active</p>
+                <button class="btn-soft" style="padding:6px 12px; font-size:11px;" type="button">Accept</button>
+              </div>
+            </div>
+
+            <!-- Offboarding (low-emphasis, collapsed) -->
+            <div class="mt-30" style="margin-top: 30px;">
+              <div class="offboard-accordion" id="offboardAccordion">
+                <button class="offboard-toggle" type="button" id="offboardToggleBtn">
+                  <span class="offboard-toggle-label">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:15px;height:15px;"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Offboarding & Exit
+                  </span>
+                  <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="offboard-body">
+                  <div class="offboard-body-inner">
+                    <div class="offboard-item">
+                      <div><div class="t">Exit Guidelines</div><div class="d">What to expect if you ever resign</div></div>
+                      <button class="btn-outline-soft" style="padding:6px 12px; font-size:11px;" type="button">View</button>
+                    </div>
+                    <div class="offboard-item">
+                      <div><div class="t">Submit Resignation</div><div class="d">Online form with an approval workflow</div></div>
+                      <button class="btn-outline-soft" style="padding:6px 12px; font-size:11px;" type="button">Submit</button>
+                    </div>
+                    <div class="offboard-item">
+                      <div><div class="t">Notice Period</div><div class="d">Per policy</div></div>
+                      <span style="font-weight:800; font-size:13px; color:var(--text);">30 Days</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -590,6 +529,48 @@
         } else if (!dropdown.contains(e.target)) {
           dropdown.classList.remove('show');
         }
+      }
+    });
+  </script>
+  <script>
+    (function () {
+      var tip = document.createElement('div');
+      tip.className = 'nav-tooltip';
+      document.body.appendChild(tip);
+      document.querySelectorAll('.sidebar .nav-item[title]').forEach(function (item) {
+        var label = item.getAttribute('title');
+        item.removeAttribute('title'); // avoid a duplicate native tooltip
+        item.addEventListener('mouseenter', function () {
+          var r = item.getBoundingClientRect();
+          tip.textContent = label;
+          tip.style.top = (r.top + r.height / 2) + 'px';
+          tip.style.left = (r.right + 10) + 'px';
+          tip.classList.add('show');
+        });
+        item.addEventListener('mouseleave', function () {
+          tip.classList.remove('show');
+        });
+      });
+    })();
+  </script>
+  <script>
+    // Journey Hub interactions — session-only, nothing is persisted.
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('#onboardChecklist .checklist-action:not(.is-done)').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var row = btn.closest('.checklist-row');
+          row.classList.add('is-complete');
+          btn.classList.add('is-done');
+          btn.textContent = btn.textContent.replace('Mark Done', 'Done ✓').replace('View', 'Viewed ✓');
+        });
+      });
+
+      var offToggle = document.getElementById('offboardToggleBtn');
+      var offAccordion = document.getElementById('offboardAccordion');
+      if (offToggle && offAccordion) {
+        offToggle.addEventListener('click', function () {
+          offAccordion.classList.toggle('open');
+        });
       }
     });
   </script>
