@@ -129,6 +129,9 @@
           <a href="index.html" class="nav-item active" title="Dashboard"><svg>
               <use href="#icon-home"></use>
             </svg><span class="nav-label">Dashboard</span></a>
+          <a href="Wk-code/Home.html" class="nav-item" title="Journey"><svg>
+              <use href="#icon-trophy"></use>
+            </svg><span class="nav-label">Journey</span></a>
           <a href="Wk-code/Directory.html" class="nav-item" title="Employee Directory"><svg>
               <use href="#icon-user"></use>
             </svg><span class="nav-label">Employee Directory</span></a>
@@ -213,37 +216,20 @@
       <div class="content-wrapper">
 
         <!-- LinkedIn-style Profile Card -->
-        <section class="profile-banner linkedin-style">
-          <div class="profile-cover">
-            <div class="cover-text-brand">
-              <h1>WorkLine</h1>
-              <p>"The art of simplicity is a puzzle of complexity"</p>
+        <!-- Compact identity strip (no cover photo / LinkedIn-style banner) -->
+        <div class="identity-strip">
+          <div class="identity-left">
+            <div class="avatar-medium">S</div>
+            <div>
+              <div class="identity-name">Santhosh <span class="emp-id">[1102]</span> <span class="status active">Active Role</span></div>
+              <div class="identity-role">Software Engineer at WorkLine • UI/UX Specialist • Bangalore, India</div>
             </div>
           </div>
-          <div class="profile-content-wrap">
-            <div class="profile-avatar-container">
-              <div class="avatar-large">S</div>
-            </div>
-            
-            <div class="profile-meta-grid">
-              <div class="profile-info-block">
-                <h2 class="employee-name">
-                  Santhosh <span class="emp-id">[1102]</span>
-                  <span class="status active">Active Role</span>
-                </h2>
-                <p class="professional-headline">Software Engineer at WorkLine • UI/UX Specialist • Bangalore, India</p>
-              </div>
-              
-              <div class="profile-badges-block">
-                <div class="panel-badge">
-                  <span class="approved">Profile Approved</span>
-                  <span class="percent">95% Complete</span>
-                </div>
-              </div>
-            </div>
-
+          <div class="identity-right">
+            <span class="identity-badge approved">✓ Profile Approved</span>
+            <span class="identity-badge percent">95% Complete</span>
           </div>
-        </section>
+        </div>
 
         <!-- Celebrations — a slim strip in the primary feed, so it never
              breaks the card grid's vertical rhythm below it -->
@@ -261,7 +247,7 @@
         </div>
 
         <!-- ============ QUICK PULSE ROW (bento) ============ -->
-        <div class="pulse-row">
+        <div class="pulse-row pulse-row-3">
 
           <!-- Mini stat: modules filled -->
           <div class="mini-stat-card">
@@ -301,39 +287,115 @@
             </div>
             <div class="pulse-feedback" id="pulseFeedback">Your check-in stays private to you — nothing is saved.</div>
           </div>
+        </div>
 
-          <!-- This week's profile tasks -->
-          <div class="week-card">
-            <div class="week-card-head">
-              <div>
-                <div class="week-card-title">This Week's Profile Tasks</div>
-                <div class="week-card-sub">Week of Aug 10 – 16</div>
-              </div>
-              <span class="pill-success">On Track</span>
+        <!-- ============ WEEKLY ATTENDANCE ============ -->
+        <div class="attendance-panel">
+          <div class="week-card-head">
+            <div>
+              <div class="week-card-title">Weekly Attendance</div>
+              <div class="week-card-sub">Week of Aug 10 – 16</div>
             </div>
+            <span class="pill-success" id="attendanceStatusPill">Present</span>
+          </div>
 
-            <div class="week-strip">
-              <div class="week-day done"><span class="now-tag">&nbsp;</span><span class="dot"></span>Mon<span>10</span></div>
-              <div class="week-day today"><span class="now-tag">Now</span><span class="dot"></span>Tue<span>11</span></div>
-              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Wed<span>12</span></div>
-              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Thu<span>13</span></div>
-              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Fri<span>14</span></div>
-              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sat<span>15</span></div>
-              <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sun<span>16</span></div>
-            </div>
+          <div class="week-strip">
+            <div class="week-day done"><span class="now-tag">&nbsp;</span><span class="dot"></span>Mon<span>10</span></div>
+            <div class="week-day today"><span class="now-tag">Now</span><span class="dot"></span>Tue<span>11</span></div>
+            <div class="week-day wfh"><span class="now-tag">&nbsp;</span><span class="dot"></span>Wed<span>12</span></div>
+            <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Thu<span>13</span></div>
+            <div class="week-day"><span class="now-tag">&nbsp;</span><span class="dot"></span>Fri<span>14</span></div>
+            <div class="week-day off"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sat<span>15</span></div>
+            <div class="week-day off"><span class="now-tag">&nbsp;</span><span class="dot"></span>Sun<span>16</span></div>
+          </div>
 
-            <div class="week-readout">
-              <span class="num" id="weekTaskNum">2</span>
-              <span class="of" id="weekTaskOf">of 5 tasks reviewed this week</span>
-            </div>
-            <div class="progress-bar-thin">
-              <div class="progress-fill-thin" id="weekTaskFill" style="width: 40%;"></div>
-            </div>
+          <div class="attendance-legend">
+            <span><span class="dot present"></span> Present</span>
+            <span><span class="dot wfh"></span> WFH</span>
+            <span><span class="dot off"></span> Weekend</span>
+          </div>
 
-            <div class="week-actions">
-              <button class="btn-soft" id="viewPendingBtn" type="button">View Pending Items</button>
-              <button class="btn-outline-soft" id="markTodayBtn" type="button">Mark Today Reviewed</button>
+          <div class="attendance-timeline">
+            <div class="attendance-hours"><span class="num" id="attHoursNum">02:12</span><span class="of">hrs today</span></div>
+            <div class="progress-bar-thin"><div class="progress-fill-thin" id="attProgressFill" style="width: 20%;"></div></div>
+            <div class="attendance-time-labels"><span>10:00 AM</span><span>06:30 PM</span></div>
+          </div>
+
+          <div class="attendance-actions">
+            <div class="attendance-checkin-chip" id="attCheckinChip">
+              <span class="time">09:39 AM</span>
+              <span class="lbl">Checked In</span>
             </div>
+            <button class="btn-outline-soft" id="attCheckoutBtn" type="button">← Check Out</button>
+          </div>
+
+          <div class="attendance-confirm" id="attConfirmBanner">
+            <span class="dot"></span> <span id="attConfirmText">Checked in at 09:39 AM</span>
+          </div>
+        </div>
+
+        <!-- ============ MOMENTUM PATH ============
+             A profile-completion "journey map" — deliberately not another
+             attendance strip. Four checkpoints connected by a track that
+             fills with your overall progress; the weakest checkpoint is
+             called out as the next best action. -->
+        <div class="momentum-panel">
+          <div class="momentum-head">
+            <div>
+              <div class="momentum-title">Your Momentum</div>
+              <div class="momentum-sub">Four checkpoints to an All-Star profile</div>
+            </div>
+            <div class="momentum-streak"><span class="flame">🔥</span> 5-day update streak <span class="streak-best">· best 12</span></div>
+          </div>
+
+          <div class="momentum-path" id="momentumPath">
+            <div class="momentum-track"><div class="momentum-track-fill" style="width: 79%;"></div></div>
+
+            <a href="Wk-code/hub-personal.html" class="momentum-node is-done">
+              <svg class="momentum-ring" viewBox="0 0 50 50">
+                <circle class="mp-bg" cx="25" cy="25" r="22"></circle>
+                <circle class="mp-fg" cx="25" cy="25" r="22" style="stroke-dasharray: 138; stroke-dashoffset: 0;"></circle>
+              </svg>
+              <span class="momentum-icon"><svg><use href="#icon-family"></use></svg></span>
+              <span class="momentum-label">Personal<small>100%</small></span>
+            </a>
+
+            <a href="Wk-code/hub-career.html" class="momentum-node is-done">
+              <svg class="momentum-ring" viewBox="0 0 50 50">
+                <circle class="mp-bg" cx="25" cy="25" r="22"></circle>
+                <circle class="mp-fg" cx="25" cy="25" r="22" style="stroke-dasharray: 138; stroke-dashoffset: 14;"></circle>
+              </svg>
+              <span class="momentum-icon"><svg><use href="#icon-briefcase"></use></svg></span>
+              <span class="momentum-label">Career & Edu<small>90%</small></span>
+            </a>
+
+            <a href="Wk-code/hub-documents.html" class="momentum-node">
+              <svg class="momentum-ring" viewBox="0 0 50 50">
+                <circle class="mp-bg" cx="25" cy="25" r="22"></circle>
+                <circle class="mp-fg" cx="25" cy="25" r="22" style="stroke-dasharray: 138; stroke-dashoffset: 35;"></circle>
+              </svg>
+              <span class="momentum-icon"><svg><use href="#icon-id"></use></svg></span>
+              <span class="momentum-label">Documents<small>75%</small></span>
+            </a>
+
+            <a href="Wk-code/hub-settings.html" class="momentum-node is-current">
+              <span class="momentum-pulse-ring"></span>
+              <svg class="momentum-ring" viewBox="0 0 50 50">
+                <circle class="mp-bg" cx="25" cy="25" r="22"></circle>
+                <circle class="mp-fg" cx="25" cy="25" r="22" style="stroke-dasharray: 138; stroke-dashoffset: 69;"></circle>
+              </svg>
+              <span class="momentum-icon"><svg><use href="#icon-gear"></use></svg></span>
+              <span class="momentum-label">Settings<small>50%</small></span>
+              <span class="momentum-here">You are here</span>
+            </a>
+          </div>
+
+          <div class="momentum-next">
+            <div class="momentum-next-copy">
+              <span class="momentum-next-kicker">Next best action</span>
+              <span class="momentum-next-text">Settings is your lowest checkpoint — set a security question to pick up +25%.</span>
+            </div>
+            <a href="Wk-code/hub-settings.html" class="btn-soft">Continue Settings →</a>
           </div>
         </div>
 
@@ -766,36 +828,28 @@
         });
       }
 
-      /* ---------- 2) Weekly task tracker (session-only) ---------- */
-      var markTodayBtn = document.getElementById('markTodayBtn');
-      var weekTaskNum = document.getElementById('weekTaskNum');
-      var weekTaskFill = document.getElementById('weekTaskFill');
-      var weekTotal = 5;
-      var weekDone = 2;
+      /* ---------- Weekly Attendance: Check Out (session-only) ---------- */
+      var attCheckoutBtn = document.getElementById('attCheckoutBtn');
+      if (attCheckoutBtn) {
+        attCheckoutBtn.addEventListener('click', function () {
+          document.getElementById('attHoursNum').textContent = '07:35';
+          document.getElementById('attProgressFill').style.width = '100%';
+          document.getElementById('attendanceStatusPill').textContent = 'Day Complete';
 
-      function renderWeekTasks() {
-        weekTaskNum.textContent = weekDone;
-        weekTaskFill.style.width = Math.round((weekDone / weekTotal) * 100) + '%';
-      }
+          var chip = document.getElementById('attCheckinChip');
+          chip.classList.add('is-out');
+          chip.querySelector('.time').textContent = '06:31 PM';
+          chip.querySelector('.lbl').textContent = 'Checked Out';
 
-      if (markTodayBtn) {
-        markTodayBtn.addEventListener('click', function () {
-          if (weekDone >= weekTotal) return;
-          weekDone += 1;
-          renderWeekTasks();
-          markTodayBtn.textContent = 'Reviewed ✓';
-          markTodayBtn.disabled = true;
-          var todayDot = document.querySelector('.week-day.today');
-          if (todayDot) todayDot.classList.add('done');
+          document.getElementById('attConfirmText').textContent = 'Checked out at 06:31 PM — 07:35 logged today';
+
+          attCheckoutBtn.textContent = 'Checked Out ✓';
+          attCheckoutBtn.disabled = true;
         });
       }
 
-      var viewPendingBtn = document.getElementById('viewPendingBtn');
-      if (viewPendingBtn) {
-        viewPendingBtn.addEventListener('click', function () {
-          document.querySelector('.quick-complete').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-      }
+      /* Momentum Path nodes are plain links to each category hub —
+         no extra JS needed; the CTA below routes to the weakest one. */
 
       /* ---------- 3) Quick Complete: live completion preview ---------- */
       // Snapshot of the ORIGINAL saved state, so "Reset preview" can restore it exactly.
@@ -911,7 +965,6 @@
       }
 
       // Initialize rings/bars to the saved state on load.
-      renderWeekTasks();
       setOverall(previewState.overall);
       setBreakdown('career', previewState.breakdowns.career);
       setBreakdown('account', previewState.breakdowns.account);
